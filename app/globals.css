@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-primary: #050814;
+  --bg-secondary: #080E21;
+  --bg-carbon: #0C132C;
+  --laser-cyan: #00F2FE;
+  --laser-blue: #1E60FF;
+  --matrix-emerald: #00F5A0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 96px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #050814;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 198, 255, 0.18), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 25%, rgba(30, 96, 255, 0.15), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 15% 65%, rgba(0, 245, 160, 0.1), transparent 55%),
+    linear-gradient(180deg, #050814 0%, #080E21 50%, #04060F 100%);
+  background-attachment: fixed;
+  color: #F8FAFC;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  letter-spacing: -0.015em;
+}
+
+body::selection {
+  background: rgba(0, 242, 254, 0.35);
+  color: #ffffff;
+}
+
+/* Minimalist Silicon Valley Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050814;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 198, 255, 0.25);
+  border-radius: 9999px;
+  border: 1px solid #050814;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F2FE;
+}
+
+/* Silicon Valley Carbon Cards (No Awkward White Corners) */
+.carbon-card {
+  position: relative;
+  background: #080E21;
+  border: 1px solid rgba(0, 198, 255, 0.15);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(0, 198, 255, 0.1);
+}
+
+.carbon-card:hover {
+  border-color: rgba(0, 242, 254, 0.45);
+  background: #0C132C;
+  transform: translateY(-2px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 242, 254, 0.2), inset 0 1px 0 rgba(0, 242, 254, 0.2);
+}
+
+.carbon-pill {
+  background: rgba(0, 198, 255, 0.08);
+  border: 1px solid rgba(0, 198, 255, 0.2);
+  color: #7DD3FC;
+  transition: all 0.2s ease;
+}
+
+.carbon-pill:hover {
+  background: rgba(0, 198, 255, 0.18);
+  border-color: rgba(0, 242, 254, 0.5);
+  color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+/* Silicon Valley Text Gradients */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #FFFFFF 20%, #7DD3FC 60%, #00F2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-laser {
+  background: linear-gradient(135deg, #FFFFFF 10%, #60A5FA 40%, #00F2FE 80%, #00F5A0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desktop-actions > a {
+  flex-basis: 0;
+}
+
+@media (max-width: 420px) {
+  .desktop-actions {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

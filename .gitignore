@@ -1,0 +1,11 @@
+.next
+node_modules
+out
+/assets
+.env
+.env*.local
+*.tsbuildinfo
+vercel.json
+dev-server*.log
+.chrome-check
+chrome-check*.png
