@@ -13,7 +13,7 @@
 
 ## 🌐 Overview & Live Deployment
 
-> **Live Website:** [https://hammad.dpdns.org](https://hammad.dpdns.org)  
+> **Live Website:** [https://hammad986.dpdns.org](https://hammad986.dpdns.org)  
 > **Role:** Full-Stack AI Developer & Applied Systems Specialist  
 > **Status:** 🟢 Available for Hire / Open to Full-Time & Contract Roles
 
@@ -158,7 +158,7 @@ The optimized static build will be generated in the `/out` directory.
 
 ## 📬 Contact & Connect
 
-- **Live URL**: [hammad.dpdns.org](https://hammad.dpdns.org)
+- **Live URL**: [hammad986.dpdns.org](https://hammad986.dpdns.org)
 - **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)
 - **LinkedIn**: [linkedin.com/in/muhammed-hammad-42659726a](https://www.linkedin.com/in/muhammed-hammad-42659726a)
 - **GitHub**: [@hammad986](https://github.com/hammad986)
