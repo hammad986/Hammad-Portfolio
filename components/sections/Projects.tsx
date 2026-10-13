@@ -76,7 +76,7 @@ export function Projects({
                 }}
                 className={`rounded-xl px-3 sm:px-4 py-1.5 text-xs font-semibold transition duration-200 ${
                   selectedCategory === cat.id
-                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_0_20px_rgba(0,242,254,0.3)]"
+                    ? "bg-white text-[#050814]"
                     : "border border-cyan-500/20 bg-[#0C132C] text-slate-300 hover:border-cyan-500/50 hover:text-white"
                 }`}
               >
@@ -268,9 +268,9 @@ export function Projects({
             <Link
               href="/projects"
               onClick={() => sounds.playClick()}
-              className="inline-flex items-center gap-2 rounded-2xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-[0_0_25px_rgba(0,242,254,0.2)] hover:border-cyan-500 hover:bg-cyan-500/30 hover:scale-105 transition duration-300"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-6 py-3.5 text-xs font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.08] sm:text-sm"
             >
-              <span>Explore All 24+ Projects & Case Studies</span>
+              <span>Explore all {projects.length} projects</span>
               <ArrowRight className="h-4 w-4 text-cyanCore" />
             </Link>
           </div>

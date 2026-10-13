@@ -202,7 +202,7 @@ export function TechSphere3D() {
               className="absolute left-0 top-0 transition-transform duration-75"
             >
               <button
-                className="group flex items-center gap-1.5 rounded-full border border-cyan-500/30 bg-[#080E21]/90 px-3 py-1.5 text-xs font-semibold backdrop-blur-xl transition-all duration-200 hover:border-cyan-500 hover:bg-cyan-500/25 hover:scale-110 hover:shadow-[0_0_20px_rgba(0,242,254,0.5)]"
+                className="group flex items-center gap-1.5 rounded-lg border border-white/10 bg-[#080E21]/90 px-3 py-1.5 text-xs font-medium backdrop-blur-xl transition-colors duration-200 hover:border-white/25"
                 style={{
                   boxShadow: depth > 0.7 ? `0 0 15px ${item.color}35` : undefined
                 }}

@@ -5,9 +5,10 @@ import { Footer } from "@/components/sections/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About & Systems Architecture | Muhammed Hammad",
+  title: "About & Systems Architecture",
   description:
-    "Systems philosophy, interactive AI agent & RAG pipeline simulator, and technical ecosystem of Muhammed Hammad."
+    "Systems philosophy, an interactive AI agent and RAG pipeline simulator, and the technical ecosystem of Muhammed Hammad (hammad986).",
+  alternates: { canonical: "https://hammad986.dpdns.org/about/" }
 };
 
 export default function AboutPage() {

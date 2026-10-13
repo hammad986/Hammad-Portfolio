@@ -4,9 +4,10 @@ import { Footer } from "@/components/sections/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects & Case Studies | Muhammed Hammad",
+  title: "Projects & Case Studies",
   description:
-    "Explore 24+ production AI applications, SaaS platforms, desktop utilities, and deep-dive engineering case studies built by Muhammed Hammad."
+    "Production AI applications, SaaS platforms, desktop utilities, and engineering case studies built by Muhammed Hammad (hammad986).",
+  alternates: { canonical: "https://hammad986.dpdns.org/projects/" }
 };
 
 export default function ProjectsPage() {

@@ -1,164 +1,162 @@
-# Muhammed Hammad | Full-Stack AI Developer & Systems Specialist
+# Muhammed Hammad | AI/ML Engineer and Full-Stack Developer
 
-[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-hammad.dpdns.org-00F2FE?style=for-the-badge&logo=googlechrome&logoColor=black)](https://hammad.dpdns.org)
-[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20On-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://hammad.dpdns.org)
+[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-hammad986.dpdns.org-00F2FE?style=for-the-badge&logo=googlechrome&logoColor=black)](https://hammad986.dpdns.org)
+[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20On-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://hammad986.dpdns.org)
 [![Next.js 15](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript%205-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-00F5A0.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 🌐 Overview & Live Deployment
+## Overview
 
-> **Live Website:** [https://hammad.dpdns.org](https://hammad.dpdns.org)  
-> **Role:** Full-Stack AI Developer & Applied Systems Specialist  
-> **Status:** 🟢 Available for Hire / Open to Full-Time & Contract Roles
+> **Live website:** [https://hammad986.dpdns.org](https://hammad986.dpdns.org)
+> **Role:** AI/ML Engineer and Full-Stack Developer
+> **Status:** Open to full-time and contract roles
 
-This repository contains the complete production source code for **Muhammed Hammad's** multi-page engineering portfolio. Engineered for zero layout shift, extreme hardware acceleration, deterministic AI reasoning simulations, and client-side RAG search.
+This repository contains the production source for the portfolio of Muhammed Hammad (hammad986). It is a statically exported Next.js site built for fast loads, semantic markup, and structured SEO data.
 
 ---
 
-## 🏗️ Multi-Page Architecture
+## Pages
 
 ```
 /
-├── / (Home Overview)             # Bento Hero, Stats, Top 3 Flagships, 3D Cosmos & Navigation
-├── /projects                     # 24+ Production Builds, Case Studies & Architecture SVGs
-├── /certifications               # 37+ Verified Credentials Vault with live Search & PDF Viewer
-├── /experience                   # Career Timeline (Saiket Systems ML Ongoing, ThirdVizion, InAmbigous, etc.)
-├── /about                        # Systems Philosophy & Interactive AI Multi-Agent Simulator
-└── /contact                      # Direct Communication Channels & Dispatch Form
+├── /              Home overview (hero, highlights, top projects and credentials)
+├── /projects      Production builds, case studies, and architecture diagrams
+├── /certifications Verified credentials vault with keyword search and document viewer
+├── /experience    Career and internship timeline
+├── /about         Systems philosophy and interactive AI pipeline simulator
+├── /contact       Direct contact channels and enquiry form
+├── /privacy       Privacy policy
+└── /terms         Terms and conditions
 ```
 
 ---
 
-## 🚀 Key Differentiators & Features
+## Features
 
-- 🤖 **Ask Hammad AI Assistant**: Fully client-side RAG intelligence engine trained on 24+ projects and 37+ verified credentials with instant structured answers, citation chips, and direct links.
-- ⚡ **Interactive AI Pipeline Simulator**: Live multi-agent reasoning playground supporting model switching (*Gemini 2.0 Flash, Claude 3.5, Llama 3.3*), OCR/vector retrieval execution steps, and real-time p95 latency inspection.
-- 📜 **37+ Verified Credentials Vault**: Full catalog of verified credentials (*Stanford Online / Andrew Ng, AWS, Google Cloud GenAI Studio, Deloitte, Oracle*) with live keyword search and full-screen embedded PDF viewer.
-- 🛠 **24+ Production Case Studies**: Real problems, engineering solutions, quantifiable outcome metrics, and interactive SVG system architecture blueprints.
-- 🌐 **3D WebGL Cybernetic Cosmos**: Zero-lag Three.js gyro core and starfield particle lattice positioned with 100% clean typography separation.
-- ⌨️ **Command Palette (`Cmd+K` / `Ctrl+K`)**: Keyboard-driven navigation for lightning-fast jumping between routes, projects, CLI, and resume downloads.
-- 💻 **Developer CLI Terminal**: Interactive browser-based terminal emulator supporting commands like `help`, `skills`, `projects`, `certs`, `hire`, and `clear`.
-- 📱 **100% Mobile Responsive**: Fluid typography, responsive modals, compact header dock, and touch-friendly controls across all screen sizes (375px to 4K).
+- **Ask Hammad AI Assistant**: an offline, client-side assistant that answers from the portfolio knowledge base with source links.
+- **AI Pipeline Simulator**: an interactive multi-agent reasoning playground with execution steps and latency readouts.
+- **Verified Credentials Vault**: searchable catalog of credentials with an in-browser PDF and image viewer.
+- **Production Case Studies**: problem, solution, outcome, and system architecture for each project.
+- **3D WebGL scene**: a Three.js scene positioned so it never overlaps the primary content.
+- **Command palette**: keyboard-driven navigation via `Cmd+K` / `Ctrl+K`.
+- **Developer CLI**: an in-browser terminal emulator supporting `help`, `skills`, `projects`, `certs`, `hire`, and `clear`.
+- **Grok Bot demo**: an interactive, dependency-free procedural SVG avatar engine driven by a compact JSON export.
+- **Legal pages and favicon**: privacy policy, terms and conditions, and a generated SVG favicon.
+- **Responsive layout**: tested from small mobile widths through to large desktop displays.
+- **Reduced motion support**: scroll and animation behaviors respect the user's operating system preference.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech stack
 
-- **Framework**: [Next.js 15.5.9](https://nextjs.org/) (App Router, Static Export `output: 'export'`)
-- **Core Library**: [React 19](https://react.dev/)
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, static export `output: "export"`)
+- **Core library**: [React 19](https://react.dev/)
 - **Language**: [TypeScript 5](https://www.typescriptlang.org/)
-- **3D & WebGL**: [Three.js](https://threejs.org/), [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber), [@react-three/drei](https://github.com/pmndrs/drei)
+- **3D and WebGL**: [Three.js](https://threejs.org/), [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber), [@react-three/drei](https://github.com/pmndrs/drei)
 - **Styling**: [Tailwind CSS v3](https://tailwindcss.com/), `tailwind-merge`, `clsx`
-- **Animations**: [Framer Motion](https://www.framer.com/motion/), [GSAP](https://greensock.com/gsap/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/), [GSAP](https://greensock.com/gsap/)
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Forms**: [EmailJS](https://www.emailjs.com/) (Client-Side Dispatch)
+- **Forms**: [EmailJS](https://www.emailjs.com/) (client-side dispatch)
 
 ---
 
-## 🌩️ Cloudflare Pages Deployment Guide
+## Deployment (Cloudflare Pages)
 
-This project is pre-configured with static export (`output: 'export'` with `trailingSlash: true`). Follow these exact settings to deploy on **Cloudflare Pages** with zero errors:
+This project uses static export (`output: "export"` with `trailingSlash: true`). In the Cloudflare Pages dashboard:
 
-### Step-by-Step Cloudflare Pages Setup:
-
-1. Log into your **[Cloudflare Dashboard](https://dash.cloudflare.com/)** and navigate to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
-2. Select your GitHub repository (`Hammad-Portfolio-main` / `portfolio`).
-3. In the **Set up builds and deployments** step, configure:
+1. Go to **Workers & Pages → Create application → Pages → Connect to Git**.
+2. Select the repository.
+3. Configure the build:
    - **Framework preset**: `None` (or `Next.js (Static HTML Export)`)
    - **Build command**: `npm run build`
-   - **Build output directory**: `out` *(IMPORTANT: Must be `out`, NOT `.next`)*
-   - **Root directory**: `/` (Leave blank if root)
-4. Under **Environment variables (advanced)**, add:
-   - `NODE_VERSION`: `20`
-5. Click **Save and Deploy**.
+   - **Build output directory**: `out`
+   - **Root directory**: `/`
+4. Add an environment variable `NODE_VERSION` set to `20`.
+5. Save and deploy.
 
-> **Note:** The repository includes `.node-version` (20.18.0), `.nvmrc` (20), `public/_headers`, and `public/_routes.json` ensuring 100% automated compatibility with Cloudflare Pages edge delivery.
+The repository includes `.node-version`, `.nvmrc`, `public/_headers`, and `public/_routes.json` for Cloudflare Pages compatibility.
 
 ---
 
-## 💻 Local Development Setup
+## Local development
 
 ### Prerequisites
-- **Node.js**: v18.18+ or v20+
-- **npm** or **pnpm** / **yarn**
 
-### 1. Clone the repository
+- **Node.js**: v18.18+ or v20+
+- **npm**
+
+### Setup
+
 ```bash
 git clone https://github.com/hammad986/portfolio.git
 cd portfolio
-```
-
-### 2. Install dependencies
-```bash
 npm install
+npm run dev
 ```
 
-### 3. Setup environment variables (Optional for Contact Form)
-Create a `.env.local` file in the root directory:
+Open [http://localhost:3000](http://localhost:3000).
+
+### Contact form environment variables (optional)
+
+Create a `.env.local` file:
+
 ```env
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-### 4. Run development server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Production build
 
-### 5. Build for production (Static Export)
 ```bash
 npm run build
 ```
-The optimized static build will be generated in the `/out` directory.
+
+The static build is written to `out/`.
 
 ---
 
-## 📁 Repository Structure
+## Repository structure
 
 ```text
 ├── app/
-│   ├── layout.tsx             # Root layout with dark carbon theme & analytics
-│   ├── page.tsx               # Home Overview Page
-│   ├── globals.css            # Global CSS variables & carbon surface utilities
-│   ├── projects/page.tsx      # Dedicated 24+ Projects & Case Studies Hub
-│   ├── certifications/page.tsx# Dedicated 37+ Verified Credentials Vault
-│   ├── experience/page.tsx    # Dedicated Career & Internships Timeline
-│   ├── about/page.tsx         # Dedicated Systems Architecture & AI Simulator
-│   └── contact/page.tsx       # Dedicated Direct Contact Channel
+│   ├── layout.tsx              Root layout, metadata, and structured data
+│   ├── page.tsx                Home overview page
+│   ├── icon.svg                Site favicon
+│   ├── globals.css             Global styles and theme variables
+│   ├── projects/page.tsx       Projects and case studies
+│   ├── certifications/page.tsx Credentials vault
+│   ├── experience/page.tsx     Career timeline
+│   ├── about/page.tsx          Systems architecture and AI simulator
+│   ├── contact/page.tsx        Contact channels
+│   ├── privacy/page.tsx        Privacy policy
+│   ├── terms/page.tsx          Terms and conditions
+│   ├── sitemap.ts              Generated sitemap
+│   └── robots.ts               Generated robots rules
 ├── components/
-│   ├── header.tsx             # Silicon Valley Dock navigation with Ask AI & CLI
-│   ├── command-palette.tsx    # Cmd+K global keyboard shortcut menu
-│   ├── command-scene.tsx      # Three.js 3D WebGL Cyber Gyro Core
-│   ├── ai-assistant-modal.tsx # Ask Hammad AI RAG assistant
-│   ├── ai-pipeline-playground.tsx # Interactive AI multi-agent simulator
-│   ├── project-modal.tsx      # Deep-dive Case Study & Architecture SVG viewer
-│   ├── certificate-modal.tsx  # Full-screen PDF & image credential viewer
-│   ├── terminal-modal.tsx     # Developer CLI Terminal Emulator
-│   └── sections/              # Modular section components (Hero, Projects, Certs, etc.)
+│   ├── grok-bot/               Grok Bot procedural avatar engine and React wrapper
+│   ├── sections/               Modular page sections
+│   └── ...                      Modals, header, and interactive widgets
 ├── lib/
-│   └── data.ts                # Single source of truth for projects, certs, experience & metrics
+│   └── data.ts                 Single source of truth for projects, credentials, and experience
 ├── public/
-│   ├── assets/                # WebP images, screenshots, and 37+ certificates
-│   ├── _headers               # Cloudflare Pages security & caching headers
-│   └── _routes.json           # Cloudflare Pages static route rules
-├── next.config.ts             # Next.js static export & trailingSlash configuration
-├── .node-version              # Node 20 runtime declaration for Cloudflare
-└── README.md                  # Executive documentation
+│   ├── assets/                 Images, screenshots, and certificate documents
+│   ├── _headers                Cloudflare Pages security and caching headers
+│   └── _routes.json            Cloudflare Pages route rules
+├── next.config.ts              Static export configuration
+└── README.md
 ```
 
 ---
 
-## 📬 Contact & Connect
+## Contact
 
-- **Live URL**: [hammad.dpdns.org](https://hammad.dpdns.org)
+- **Website**: [hammad986.dpdns.org](https://hammad986.dpdns.org)
 - **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)
 - **LinkedIn**: [linkedin.com/in/muhammed-hammad-42659726a](https://www.linkedin.com/in/muhammed-hammad-42659726a)
 - **GitHub**: [@hammad986](https://github.com/hammad986)
@@ -167,6 +165,6 @@ The optimized static build will be generated in the `/out` directory.
 
 ---
 
-## 📄 License
+## License
 
-MIT License © 2026 Muhammed Hammad. Designed & Engineered with precision.
+MIT License © 2026 Muhammed Hammad.

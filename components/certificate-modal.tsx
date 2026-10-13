@@ -58,7 +58,9 @@ export function CertificateModal({
 
   const handleShare = () => {
     sounds.playClick();
-    navigator.clipboard.writeText(window.location.origin + certificate.filePath);
+    navigator.clipboard.writeText(
+      window.location.origin + encodeURI(certificate.filePath)
+    );
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2000);
   };

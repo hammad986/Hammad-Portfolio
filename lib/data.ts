@@ -103,7 +103,7 @@ export const socials = {
   email: "mailto:mdhammad2906@gmail.com",
   rawEmail: "mdhammad2906@gmail.com",
   phone: "+91 6369740522",
-  portfolio: "https://hammad.dpdns.org"
+  portfolio: "https://hammad986.dpdns.org"
 };
 
 export const navItems = [
@@ -113,14 +113,6 @@ export const navItems = [
   { label: "Experience", href: "/experience" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
-];
-
-export const metrics = [
-  { value: "24+", label: "Production & AI Projects", icon: Code2, suffix: "+" },
-  { value: "37+", label: "Verified Credentials", icon: Award, suffix: "+" },
-  { value: "5", label: "Industry Internships", icon: BriefcaseBusiness, suffix: " Co." },
-  { value: "2", label: "Windows Desktop Apps", icon: MonitorDown, suffix: " .exe" },
-  { value: "GenAI", label: "Specialized Engineering", icon: Brain, suffix: " / LLMs" }
 ];
 
 export const focusAreas = [
@@ -137,7 +129,7 @@ export const focusAreas = [
   {
     title: "Core Specialization",
     icon: Brain,
-    color: "from-purple-500/20 to-pink-500/20",
+    color: "from-blue-500/20 to-sky-500/20",
     items: [
       "Agentic AI Architecture (LangGraph/CrewAI)",
       "Retrieval Augmented Generation (Advanced RAG)",
@@ -570,19 +562,6 @@ export const certificatesList: CertificateItem[] = [
     credentialBadge: "Saiket Systems"
   },
   {
-    id: "saiket-offer-letter",
-    title: "Machine Learning Internship Appointment Letter",
-    issuer: "Saiket Systems",
-    category: "Internships & Experience",
-    date: "Verified",
-    filePath: "/assets/my certificates/saiket_sys_ml_offer_letter.png",
-    fileType: "image",
-    description: "Official appointment and selection letter as Machine Learning Intern at Saiket Systems.",
-    skills: ["Machine Learning", "Data Engineering", "Industry Appointment"],
-    featured: false,
-    credentialBadge: "Appointment Letter"
-  },
-  {
     id: "inambigous-intern-cert",
     title: "Data Analytics Internship Certificate",
     issuer: "InAmbigous Solutions",
@@ -945,15 +924,6 @@ export const certificatesList: CertificateItem[] = [
 
 export const experience = [
   {
-    role: "Machine Learning Engineer Intern",
-    company: "Saiket Systems",
-    period: "Ongoing (2026)",
-    location: "Remote",
-    detail: "Developing advanced Machine Learning algorithms, predictive analytics pipelines, model evaluation, and automated ML feature engineering. Offer letter confirmed.",
-    skills: ["Machine Learning", "Python", "Predictive Analytics", "Feature Engineering", "Model Evaluation"],
-    certId: "saiket-offer-letter"
-  },
-  {
     role: "AI/ML Engineer Intern",
     company: "ThirdVizion",
     period: "July 1, 2026 - July 31, 2026 (Completed)",
@@ -1009,11 +979,18 @@ export const experience = [
   }
 ];
 
+export const metrics = [
+  { value: String(projects.length), label: "Production & AI Projects", icon: Code2 },
+  { value: String(certificatesList.length), label: "Verified Credentials", icon: Award },
+  { value: String(experience.length), label: "Industry Internships", icon: BriefcaseBusiness },
+  { value: String(projects.filter((project) => project.category === "desktop").length), label: "Windows Desktop Apps", icon: MonitorDown }
+];
+
 export const skillGroups = [
   {
     title: "AI & Machine Learning",
     icon: Brain,
-    gradient: "from-blue-500/20 to-purple-500/20",
+    gradient: "from-blue-500/20 to-cyan-500/20",
     border: "border-blue-500/30",
     items: [
       "Generative AI",
@@ -1038,8 +1015,8 @@ export const skillGroups = [
   {
     title: "Data Science & Analytics",
     icon: Database,
-    gradient: "from-purple-500/20 to-pink-500/20",
-    border: "border-purple-500/30",
+    gradient: "from-emerald-500/20 to-teal-500/20",
+    border: "border-emerald-500/30",
     items: ["NumPy", "Pandas", "Scikit-learn", "EDA", "Statistical Modeling", "Power BI", "Tableau", "Recharts"]
   },
   {
@@ -1073,16 +1050,16 @@ export const skillGroups = [
   {
     title: "Desktop Application Engineering",
     icon: MonitorDown,
-    gradient: "from-violet-500/20 to-blue-500/20",
-    border: "border-violet-500/30",
+    gradient: "from-sky-500/20 to-blue-500/20",
+    border: "border-sky-500/30",
     items: ["PyQt / Tkinter", "OpenCV Video Engines", "PyInstaller", "Windows InnoSetup Installers", "Multithreaded GUI"]
   }
 ];
 
 export const githubStats = [
-  { label: "Public Repositories", value: "30+", detail: "AI applications, dashboards, desktop tools & libraries" },
-  { label: "Active Commit Rhythm", value: "Continuous", detail: "Daily production commits and generative AI experiments" },
-  { label: "Core Focus", value: "AI Product Engineering", detail: "Applied GenAI, autonomous systems & desktop utilities" }
+  { label: "Open Source", value: "Public", detail: "AI applications, dashboards, desktop tools and libraries" },
+  { label: "Commit Activity", value: "Active", detail: "Regular production commits and generative AI experiments" },
+  { label: "Core Focus", value: "AI Engineering", detail: "Applied GenAI, autonomous systems and desktop utilities" }
 ];
 
 export const aetherionHighlights = [
@@ -1094,55 +1071,56 @@ export const aetherionHighlights = [
 
 export const terminalCommands = {
   help: `Available commands:
-  • about      - Learn about Muhammed Hammad & engineering philosophy
-  • skills     - View core technology stack and AI specialties
-  • projects   - List featured live AI products & desktop apps
-  • certs      - View summary of 37+ verified credentials
-  • contact    - Get direct email, phone, and social handles
-  • hire       - Reasons to hire Hammad & quick contact CTA
-  • clear      - Clear the console screen
-  • aetherion  - Sneak peek at Aetherion AI architecture`,
+  about      - Learn about Muhammed Hammad and engineering philosophy
+  skills     - View core technology stack and AI specialties
+  projects   - List featured live AI products and desktop apps
+  certs      - View a summary of verified credentials
+  contact    - Get direct email, phone, and social handles
+  hire       - Reasons to hire Hammad and a quick contact CTA
+  clear      - Clear the console screen
+  aetherion  - Sneak peek at Aetherion AI architecture`,
 
-  about: `Muhammed Hammad | AI/ML Engineer & Full-Stack GenAI Builder
-Location: India | Open for Global Remote & High-Impact Roles
+  about: `Muhammed Hammad | AI/ML Engineer and Full-Stack GenAI Builder
+Location: India | Open for Global Remote and High-Impact Roles
 Focus: Engineering intelligent systems, autonomous agent swarms, and product-grade AI applications.
-Currently developing Aetherion AI and interning at ThirdVizion.`,
+Currently developing Aetherion AI as an AI/ML engineering intern at ThirdVizion.`,
 
-  skills: `⚡ AI & ML: Generative AI, RAG Systems, Autonomous Agents, LLM Fine-Tuning, OpenCV, Whisper
-⚡ Languages: Python, TypeScript, JavaScript, SQL, PHP, Bash
-⚡ Frontend: Next.js 15, React 19, Three.js/WebGL, Tailwind CSS, Framer Motion
-⚡ Cloud & Data: AWS (SageMaker, Data Eng), Oracle OCI, Pandas, NumPy, Scikit-learn`,
+  skills: `AI & ML: Generative AI, RAG Systems, Autonomous Agents, LLM Fine-Tuning, OpenCV, Whisper
+Languages: Python, TypeScript, JavaScript, SQL, PHP, Bash
+Frontend: Next.js 15, React 19, Three.js/WebGL, Tailwind CSS, Framer Motion
+Cloud and Data: AWS (SageMaker, Data Eng), Oracle OCI, Pandas, NumPy, Scikit-learn`,
 
-  projects: `🚀 1. DealFlow CRM - Advanced client pipeline & analytics (Live)
-🚀 2. Smart Doc AI - Multimodal document intelligence platform (Live)
-🚀 3. AI Proposal Writer - Generative AI client proposal SaaS (Live)
-🚀 4. Advanced Video QA System - Desktop multimodal video analysis (.exe)
-🚀 5. Nexus AI Ops - AI operations & real-time telemetry dashboard (Live)
-🚀 6. Image Toolkit Pro - Computer vision desktop workstation (.exe)
-🚀 7. Invoice Gen Pro - Dynamic financial billing SaaS`,
+  projects: `1. DealFlow CRM - Advanced client pipeline and analytics (Live)
+2. Smart Doc AI - Multimodal document intelligence platform (Live)
+3. AI Proposal Writer - Generative AI client proposal SaaS (Live)
+4. Advanced Video QA System - Desktop multimodal video analysis (.exe)
+5. Nexus AI Ops - AI operations and real-time telemetry dashboard (Live)
+6. Image Toolkit Pro - Computer vision desktop workstation (.exe)
+7. Invoice Gen Pro - Dynamic financial billing SaaS
+8. Grok Bot - Procedural SVG avatar engine (React and vanilla JS)`,
 
-  certs: `🏆 37+ Verified Industry Credentials spanning:
-• Stanford / DeepLearning.AI Supervised Machine Learning (Andrew Ng)
-• Google Cloud Generative AI Studio
-• AWS Machine Learning & AWS Data Engineer Associate (DEA-C01)
-• Deloitte Australia Data Analytics & GenAI Consulting
-• Oracle Cloud Infrastructure (OCI) Foundations
-• IIT Guwahati Partnership Excellence Award
-• NASSCOM Digital 101 Accredited & 5x Internship Completions`,
+  certs: `Verified industry credentials spanning:
+- Stanford / DeepLearning.AI Supervised Machine Learning (Andrew Ng)
+- Google Cloud Generative AI Studio
+- AWS Machine Learning and AWS Data Engineer Associate (DEA-C01)
+- Deloitte Australia Data Analytics and GenAI Consulting
+- Oracle Cloud Infrastructure (OCI) Foundations
+- IIT Guwahati Partnership Excellence Award
+- NASSCOM Digital 101 Accredited and internship completions`,
 
-  contact: `📬 Email: mdhammad2906@gmail.com
-📱 Phone: +91 6369740522
-💻 GitHub: https://github.com/hammad986
-💼 LinkedIn: https://www.linkedin.com/in/muhammed-hammad-42659726a
-🌐 Portfolio: https://hammad.dpdns.org`,
+  contact: `Email: mdhammad2906@gmail.com
+Phone: +91 6369740522
+GitHub: https://github.com/hammad986
+LinkedIn: https://www.linkedin.com/in/muhammed-hammad-42659726a
+Portfolio: https://hammad986.dpdns.org`,
 
-  hire: `🎯 Ready to build game-changing AI products together!
-✓ Proven track record with 24+ built projects & 37+ verified credentials
-✓ Full lifecycle AI engineering: from raw LLM reasoning to polished web & desktop UIs
-✓ Fast, proactive communicator with an relentless drive for excellence.
-👉 Email: mdhammad2906@gmail.com to start the conversation!`,
+  hire: `Ready to build AI products together.
+- Proven track record across AI applications and verified credentials
+- Full lifecycle AI engineering: from LLM reasoning to polished web and desktop UIs
+- Fast, proactive communicator with a relentless drive for excellence.
+Email: mdhammad2906@gmail.com to start the conversation.`,
 
-  aetherion: `🌌 Aetherion AI [Status: Active Stealth Development]
+  aetherion: `Aetherion AI [Status: Active Stealth Development]
 Autonomous multi-agent intelligence platform designed for complex real-world workflows,
 multi-step cognitive reasoning, and enterprise automation.`
 };

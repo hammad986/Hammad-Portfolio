@@ -145,7 +145,7 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={loading}
-          className="bg-white text-black font-semibold hover:bg-slate-200 rounded-full px-6"
+          className="rounded-lg bg-white px-6 font-semibold text-black hover:bg-slate-200"
         >
           {loading ? (
             <Loader2 className="h-4 w-4 animate-spin" />

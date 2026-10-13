@@ -76,9 +76,9 @@ export function CertificationsAndStack({
     <section id="certifications" className="px-3 sm:px-6 py-16 sm:py-24 z-10 relative">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Credentials & Verified Mastery"
-          title="37+ Verified Industry Certifications"
-          body="A comprehensive vault of verified credentials across AI/ML engineering, data science, cloud architecture, government accreditations, and industry internships."
+          eyebrow="Credentials and Verified Mastery"
+          title={`${certificatesList.length} Verified Industry Certifications`}
+          body="A collection of verified credentials across AI/ML engineering, data science, cloud architecture, government accreditations, and industry internships."
         />
 
         {/* Search & Category Filter Controls */}
@@ -110,13 +110,13 @@ export function CertificationsAndStack({
                     }}
                     className={`flex items-center gap-1 sm:gap-1.5 rounded-xl px-3 sm:px-3.5 py-1.5 text-xs font-semibold transition duration-200 ${
                       selectedCategory === cat.id
-                        ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_0_20px_rgba(0,242,254,0.3)]"
+                        ? "bg-white text-[#050814]"
                         : "border border-cyan-500/20 bg-[#0C132C] text-slate-300 hover:border-cyan-500/50 hover:text-white"
                     }`}
                   >
                     <span>{cat.label}</span>
                     <span
-                      className={`rounded-full px-1.5 py-0.2 text-[10px] font-mono ${
+                      className={`rounded-md px-1.5 py-0.5 text-[10px] font-mono ${
                         selectedCategory === cat.id
                           ? "bg-white/20 text-white font-bold"
                           : "bg-cyan-500/10 text-cyanCore font-semibold"
@@ -224,9 +224,9 @@ export function CertificationsAndStack({
             <Link
               href="/certifications"
               onClick={() => sounds.playClick()}
-              className="inline-flex items-center gap-2 rounded-2xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-[0_0_25px_rgba(0,242,254,0.2)] hover:border-cyan-500 hover:bg-cyan-500/30 hover:scale-105 transition duration-300"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-6 py-3.5 text-xs font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.08] sm:text-sm"
             >
-              <span>Explore All 37+ Verified Credentials Vault</span>
+              <span>Explore all {certificatesList.length} credentials</span>
               <ArrowRight className="h-4 w-4 text-cyanCore" />
             </Link>
           </div>

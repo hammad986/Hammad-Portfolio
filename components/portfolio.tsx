@@ -4,6 +4,7 @@ import { Projects } from "./sections/Projects";
 import { About } from "./sections/About";
 import { CertificationsAndStack } from "./sections/Certifications";
 import { TechArsenal } from "./sections/TechArsenal";
+import { GrokBotShowcase } from "./sections/GrokBotShowcase";
 import { Experience } from "./sections/Experience";
 import { GithubOverview } from "./sections/GithubOverview";
 import { Contact } from "./sections/Contact";
@@ -20,6 +21,7 @@ export function PortfolioPage() {
       {/* Home Page: Top 3 Flagship Credentials with Direct Link to /certifications */}
       <CertificationsAndStack limit={3} showSearch={false} showFilters={false} showViewAllButton={true} />
       <TechArsenal />
+      <GrokBotShowcase />
       <Experience />
       <GithubOverview />
       <Contact />

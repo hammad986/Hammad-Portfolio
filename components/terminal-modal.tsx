@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Terminal as TerminalIcon, X, CornerDownLeft, Sparkles, Copy, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import confetti from "canvas-confetti";
 import { terminalCommands } from "@/lib/data";
 import { buttonVariants } from "@/components/ui/button";
 import { sounds } from "@/components/sound-effects";
@@ -59,26 +58,14 @@ export function TerminalModal({
       return;
     }
 
-    if (cleanCmd === "sudo hire-hammad" || cleanCmd === "hire") {
-      try {
-        confetti({
-          particleCount: 80,
-          spread: 70,
-          origin: { y: 0.6 }
-        });
-      } catch {
-        // Ignore
-      }
-    }
-
     let output = "";
     let isError = false;
 
     if (cleanCmd in terminalCommands) {
       output = terminalCommands[cleanCmd as keyof typeof terminalCommands];
     } else if (cleanCmd === "sudo hire-hammad") {
-      output = `🎉 ACCESS GRANTED: Offer letter generated!
-Muhammed Hammad is ready to accelerate your AI & Engineering team.
+      output = `ACCESS GRANTED: Hiring brief ready.
+Muhammed Hammad is ready to join your AI and engineering team.
 Direct contact: mdhammad2906@gmail.com | +91 6369740522`;
     } else {
       isError = true;
@@ -171,7 +158,7 @@ Direct contact: mdhammad2906@gmail.com | +91 6369740522`;
                     <span className="text-emerald-400">➜</span>
                     <span className="text-cyan-300">hammad@ai-core</span>
                     <span className="text-slate-500">:</span>
-                    <span className="text-purple-300">~</span>
+                    <span className="text-cyanCore">~</span>
                     <span className="text-white font-medium">$ {log.command}</span>
                   </div>
                 )}
@@ -190,7 +177,7 @@ Direct contact: mdhammad2906@gmail.com | +91 6369740522`;
               <span className="text-emerald-400">➜</span>
               <span className="text-cyan-300">hammad@ai-core</span>
               <span className="text-slate-500">:</span>
-              <span className="text-purple-300">~</span>
+              <span className="text-cyanCore">~</span>
               <span className="text-white">$</span>
               <input
                 ref={inputRef}

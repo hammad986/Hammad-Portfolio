@@ -4,9 +4,10 @@ import { Footer } from "@/components/sections/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "37+ Verified Certifications Vault | Muhammed Hammad",
+  title: "Verified Certifications Vault",
   description:
-    "A comprehensive vault of 37+ verified industry certifications from Stanford Online, AWS, Google Cloud, and Deloitte with live PDF verification."
+    "A collection of verified industry certifications from Stanford Online, AWS, Google Cloud, and Deloitte with live document verification.",
+  alternates: { canonical: "https://hammad986.dpdns.org/certifications/" }
 };
 
 export default function CertificationsPage() {

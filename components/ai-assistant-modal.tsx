@@ -45,10 +45,10 @@ export function AiAssistantModal({
     {
       id: "init-1",
       sender: "assistant",
-      text: "👋 Hi! I'm **Hammad AI Assistant**, trained on Muhammed Hammad's verified engineering portfolio, 24+ projects, and 37+ industry certifications.\n\nAsk me anything about his technical stack, system architecture decisions, live demos, or availability!",
+      text: `Hi. I'm the Hammad AI Assistant, an offline knowledge-base assistant built from Muhammed Hammad's portfolio data: ${projects.length} projects, ${certificatesList.length} certifications, and his experience timeline.\n\nAsk about his technical stack, architecture decisions, live demos, or availability.`,
       sources: [
-        { title: "24+ Projects", link: "#projects" },
-        { title: "37+ Certifications", link: "#certifications" },
+        { title: `${projects.length} Projects`, link: "#projects" },
+        { title: `${certificatesList.length} Certifications`, link: "#certifications" },
         { title: "Resume Download", link: "/assets/Muhammed_Hammad_S_Resume.pdf" }
       ]
     }
@@ -93,16 +93,16 @@ export function AiAssistantModal({
           { title: "Tech Arsenal", link: "#tech-arsenal" }
         ];
       } else if (q.includes("dealflow") || q.includes("crm") || q.includes("smart doc") || q.includes("project")) {
-        reply = `Hammad has built **24+ applications** with live working demos:\n\n1. **DealFlow CRM**: Zero-backend 100% client-side CRM with Kanban pipeline and encrypted local persistence.\n2. **Smart Doc AI**: Multimodal document processing engine achieving **99.2% extraction accuracy** with multi-provider fallback.\n3. **AI Proposal Writer**: Generative SaaS reducing proposal drafting time by 85% with PDF export.\n4. **Advanced Video QA**: Desktop application with Whisper transcription and timestamp citations.`;
+        reply = `Hammad has built **${projects.length} applications** with live working demos:\n\n1. **DealFlow CRM**: Zero-backend 100% client-side CRM with Kanban pipeline and encrypted local persistence.\n2. **Smart Doc AI**: Multimodal document processing engine achieving **99.2% extraction accuracy** with multi-provider fallback.\n3. **AI Proposal Writer**: Generative SaaS reducing proposal drafting time by 85% with PDF export.\n4. **Advanced Video QA**: Desktop application with Whisper transcription and timestamp citations.`;
         sources = [
           { title: "DealFlow CRM Demo", link: "https://dealflow-crm.netlify.app/dashboard" },
           { title: "Smart Doc AI Demo", link: "https://smart-ai-docs.netlify.app/dashboard" },
           { title: "View All Projects", link: "#projects" }
         ];
       } else if (q.includes("cert") || q.includes("stanford") || q.includes("aws") || q.includes("google") || q.includes("deloitte")) {
-        reply = `Hammad maintains a vault of **37+ verified industry credentials**:\n\n• **Supervised Machine Learning (Stanford Online & Andrew Ng / DeepLearning.AI)**\n• **Introduction to Generative AI Studio (Google Cloud Skills Boost)**\n• **Introduction to Machine Learning on AWS (Amazon Web Services)**\n• **Technology Job Simulation (Deloitte Australia)**\n\nAll 37+ credentials feature SHA-256 verification and live PDF preview modals in the Certifications Vault!`;
+        reply = `Hammad maintains a collection of **${certificatesList.length} verified industry credentials**:\n\n- **Supervised Machine Learning (Stanford Online and Andrew Ng / DeepLearning.AI)**\n- **Introduction to Generative AI Studio (Google Cloud Skills Boost)**\n- **Introduction to Machine Learning on AWS (Amazon Web Services)**\n- **Technology Job Simulation (Deloitte Australia)**\n\nEvery credential can be previewed directly in the Certifications Vault.`;
         sources = [
-          { title: "37+ Verified Certifications Vault", link: "#certifications" }
+          { title: `${certificatesList.length} Verified Certifications`, link: "#certifications" }
         ];
       } else if (q.includes("desktop") || q.includes("exe") || q.includes("download") || q.includes("video qa") || q.includes("image toolkit")) {
         reply = `Hammad has engineered **2 production Windows desktop applications (.exe)**:\n\n1. **Advanced Video QA Pro**: Multimodal frame-accurate video query engine with local Whisper processing.\n2. **Image Toolkit Pro**: 60 FPS real-time webcam detection and batch transformation tool.\n\nBoth installers are compiled and available for immediate direct download!`;
@@ -111,13 +111,13 @@ export function AiAssistantModal({
           { title: "Download Image Toolkit .exe", link: "https://github.com/hammad986/Image-Toolkit-Pro/releases/latest/download/ImageToolkitPro.exe" }
         ];
       } else if (q.includes("hire") || q.includes("contact") || q.includes("available") || q.includes("email") || q.includes("phone")) {
-        reply = `🟢 **Status: Available for Hire & Engineering Roles**\n\n• **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)\n• **Phone**: +91 6369740522\n• **LinkedIn**: [linkedin.com/in/muhammed-hammad-42659726a](https://www.linkedin.com/in/muhammed-hammad-42659726a)\n• **GitHub**: [github.com/hammad986](https://github.com/hammad986)\n\nYou can also use the contact form at the bottom of this portfolio!`;
+        reply = `**Status: Available for Hire and Engineering Roles**\n\n- **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)\n- **Phone**: +91 6369740522\n- **LinkedIn**: [linkedin.com/in/muhammed-hammad-42659726a](https://www.linkedin.com/in/muhammed-hammad-42659726a)\n- **GitHub**: [github.com/hammad986](https://github.com/hammad986)\n\nYou can also use the contact form at the bottom of this portfolio.`;
         sources = [
           { title: "Contact Section", link: "#contact" },
           { title: "Download Resume", link: "/assets/Muhammed_Hammad_S_Resume.pdf" }
         ];
       } else {
-        reply = `I have indexed all of Hammad's projects, certifications, and experience. \n\nHe specializes in **Next.js 15, Python, Vision AI, Whisper, Agentic Architectures, and Full-Stack Systems**. Would you like to explore his **live SaaS demos**, **desktop installers**, or **37+ verified certificates**?`;
+        reply = `I have indexed all of Hammad's projects, certifications, and experience. \n\nHe specializes in **Next.js 15, Python, Vision AI, Whisper, agentic architectures, and full-stack systems**. Would you like to explore his **live SaaS demos**, **desktop installers**, or **${certificatesList.length} verified certificates**?`;
         sources = [
           { title: "View Featured Projects", link: "#projects" },
           { title: "Verified Credentials", link: "#certifications" },
@@ -262,7 +262,7 @@ export function AiAssistantModal({
               <button
                 key={prompt}
                 onClick={() => handleSend(prompt)}
-                className="shrink-0 rounded-full border border-cyan-500/25 bg-cyan-500/10 px-3 py-1 text-[11px] font-medium text-cyan-200 hover:bg-cyan-500/20 hover:border-cyan-500/50 hover:text-white transition"
+                className="shrink-0 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-medium text-slate-200 transition hover:border-white/25 hover:text-white"
               >
                 {prompt}
               </button>

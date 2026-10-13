@@ -6,17 +6,34 @@ import { Providers } from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
-const siteUrl = "https://hammad.dpdns.org";
+const siteUrl = "https://hammad986.dpdns.org";
+const personName = "Muhammed Hammad";
+const handle = "hammad986";
+const defaultTitle =
+  "Muhammed Hammad (hammad986) | AI/ML Engineer and Full-Stack Developer";
+const defaultDescription =
+  "Portfolio of Muhammed Hammad, also known as hammad986. AI/ML engineer and full-stack developer building production generative AI platforms, retrieval and agent systems, and web applications. Projects, experience, and verified certifications.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Portfolio - Muhammed Hammad S",
-  description:
-    "Muhammed Hammad is an AI/ML Engineer and Software Developer specializing in Generative AI, LLMs, and full-stack autonomous agents. View projects, experience, and technical portfolio.",
+  title: {
+    default: defaultTitle,
+    template: `%s | ${personName} (${handle})`
+  },
+  description: defaultDescription,
   applicationName: "Muhammed Hammad Portfolio",
-  authors: [{ name: "Muhammed Hammad S" }],
+  authors: [{ name: personName, url: siteUrl }],
+  creator: personName,
+  publisher: personName,
+  category: "technology",
   keywords: [
+    "hammad986",
+    "hammad986 portfolio",
+    "hammad986 github",
+    "hammad986.dpdns.org",
     "Muhammed Hammad",
+    "Muhammed Hammad portfolio",
+    "Muhammed Hammad S",
     "AI Engineer",
     "AI ML Engineer",
     "GenAI",
@@ -26,7 +43,7 @@ export const metadata: Metadata = {
     "Python",
     "Next.js",
     "React",
-    "Full Stack",
+    "Full Stack Developer",
     "RAG",
     "AI Agents",
     "Portfolio",
@@ -37,13 +54,20 @@ export const metadata: Metadata = {
     "Backend",
     "Frontend"
   ],
-  alternates: {
-    canonical: siteUrl
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
   },
   openGraph: {
-    title: "Portfolio - Muhammed Hammad S",
+    title: defaultTitle,
     description:
-      "AI/ML Engineer and Generative AI Developer building intelligent systems, AI-powered applications, autonomous workflows, and full-stack products.",
+      "AI/ML engineer and full-stack developer (hammad986) building production generative AI platforms, agent systems, and web applications.",
     url: siteUrl,
     siteName: "Muhammed Hammad Portfolio",
     images: [
@@ -51,7 +75,7 @@ export const metadata: Metadata = {
         url: "/assets/my_pic.webp",
         width: 1200,
         height: 630,
-        alt: "Muhammed Hammad S - AI/ML Engineer"
+        alt: "Muhammed Hammad (hammad986), AI/ML Engineer"
       }
     ],
     locale: "en_US",
@@ -59,20 +83,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio - Muhammed Hammad S",
+    title: defaultTitle,
     description:
-      "AI/ML Engineer and Generative AI Developer building intelligent systems and full-stack AI products.",
+      "AI/ML engineer and full-stack developer (hammad986) building production generative AI systems and web applications.",
     images: ["/assets/my_pic.webp"]
   },
   icons: {
-    icon: "/assets/aetherion_logo.webp",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: "/icon.svg",
     apple: "/assets/aetherion_logo.webp"
   },
-  manifest: "/manifest.webmanifest"
+  manifest: "/manifest.webmanifest",
+  alternates: {
+    canonical: siteUrl
+  }
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050816",
+  themeColor: "#050814",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1
@@ -86,11 +114,15 @@ export default function RootLayout({
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Muhammed Hammad S",
-    jobTitle: "AI/ML Engineer and Generative AI Developer",
+    "@id": `${siteUrl}/#person`,
+    name: personName,
+    alternateName: [handle, "hammad986.dpdns.org"],
+    identifier: handle,
+    jobTitle: "AI/ML Engineer and Full-Stack Developer",
     email: "mailto:mdhammad2906@gmail.com",
     telephone: "+91 6369740522",
     url: siteUrl,
+    image: `${siteUrl}/assets/my_pic.webp`,
     sameAs: [
       "https://github.com/hammad986",
       "https://www.linkedin.com/in/muhammed-hammad-42659726a",
@@ -100,6 +132,8 @@ export default function RootLayout({
       "Artificial Intelligence",
       "Machine Learning",
       "Generative AI",
+      "Retrieval Augmented Generation",
+      "AI Agents",
       "Full-stack Development",
       "Autonomous Workflows"
     ]
@@ -108,8 +142,11 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Portfolio - Muhammed Hammad S",
-    url: siteUrl
+    name: `${personName} (${handle})`,
+    alternateName: handle,
+    url: siteUrl,
+    inLanguage: "en",
+    author: { "@id": `${siteUrl}/#person` }
   };
 
   const portfolioSchema = {
@@ -117,6 +154,8 @@ export default function RootLayout({
     "@type": "ProfilePage",
     dateCreated: "2024-01-01T00:00:00+00:00",
     dateModified: new Date().toISOString(),
+    url: siteUrl,
+    about: { "@id": `${siteUrl}/#person` },
     mainEntity: personSchema
   };
 

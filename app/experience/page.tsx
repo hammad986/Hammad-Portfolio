@@ -4,9 +4,10 @@ import { Footer } from "@/components/sections/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experience & Internships | Muhammed Hammad",
+  title: "Experience & Internships",
   description:
-    "Engineering trajectory, industry internships at ThirdVizion, Saiket Systems, InAmbigous, and LabMentix with verified completion records."
+    "Engineering trajectory and industry internships at ThirdVizion, Saiket Systems, InAmbigous, and LabMentix with verified completion records.",
+  alternates: { canonical: "https://hammad986.dpdns.org/experience/" }
 };
 
 export default function ExperiencePage() {

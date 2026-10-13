@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://hammad.dpdns.org/sitemap.xml"
+    sitemap: "https://hammad986.dpdns.org/sitemap.xml",
+    host: "https://hammad986.dpdns.org"
   };
 }

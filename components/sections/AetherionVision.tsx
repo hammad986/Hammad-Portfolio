@@ -22,8 +22,8 @@ export function AetherionVision() {
       <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-bluecore/40 bg-[radial-gradient(circle_at_18%_15%,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_85%_85%,rgba(168,85,247,0.2),transparent_40%),linear-gradient(135deg,rgba(11,16,32,0.9),rgba(13,19,40,0.95))] p-6 sm:p-10 shadow-[0_20px_70px_rgba(0,0,0,0.8),0_0_50px_rgba(59,130,246,0.2)] backdrop-blur-2xl">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-bluecore/40 bg-bluecore/15 px-3.5 py-1 text-xs font-semibold text-blue-200 shadow-sm backdrop-blur-md">
-              <Sparkles className="h-3.5 w-3.5 text-cyanCore animate-spin-slow" />
+            <div className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3.5 py-1 text-xs font-medium text-slate-300 backdrop-blur-md">
+              <Sparkles className="h-3.5 w-3.5 text-cyanCore" />
               <span>Flagship Autonomous Project</span>
             </div>
 
@@ -42,7 +42,7 @@ export function AetherionVision() {
                   sounds.playClick();
                   setOpen(true);
                 }}
-                className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 text-white font-bold hover:from-blue-600 hover:to-purple-700 shadow-[0_0_25px_rgba(59,130,246,0.4)] rounded-2xl"
+                className="rounded-lg border border-white/15 bg-white/[0.04] font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.08]"
               >
                 <Rocket className="mr-2 h-4 w-4" />
                 Explore Architecture Vision
@@ -57,7 +57,7 @@ export function AetherionVision() {
             {/* Visual Branding Card */}
             <div className="relative min-h-44 overflow-hidden rounded-2xl border border-white/15 bg-white/[0.04] p-5 sm:col-span-2 shadow-inner">
               <div className="relative flex h-full items-center gap-5">
-                <div className="relative h-20 w-20 sm:h-24 sm:w-24 shrink-0 overflow-hidden rounded-2xl border border-purple-500/30 bg-purple-500/10 p-2 shadow-[0_0_25px_rgba(168,85,247,0.3)]">
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-2 sm:h-24 sm:w-24">
                   <Image
                     src="/assets/aetherion_logo.webp"
                     alt="Aetherion Visual"
@@ -122,7 +122,7 @@ export function AetherionVision() {
                 </h3>
               </div>
               <button
-                className={buttonVariants({ variant: "secondary", size: "icon", className: "h-8 w-8 rounded-full border-white/15" })}
+                className={buttonVariants({ variant: "secondary", size: "icon", className: "h-8 w-8 rounded-lg border-white/15" })}
                 onClick={() => setOpen(false)}
                 aria-label="Close modal"
               >
@@ -146,7 +146,7 @@ export function AetherionVision() {
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                  <span className="font-bold text-white block mb-1 text-xs sm:text-sm text-purple-200">
+                  <span className="mb-1 block text-xs font-semibold text-slate-200 sm:text-sm">
                     🔄 Self-Reflective Loops
                   </span>
                   <span className="text-xs text-slate-300">
