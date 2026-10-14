@@ -98,12 +98,15 @@ export type CertificateItem = {
 
 export const socials = {
   github: "https://github.com/hammad986",
-  linkedin: "https://www.linkedin.com/in/muhammed-hammad-42659726a",
+  linkedin: "https://www.linkedin.com/in/hammad986/",
+  huggingface: "https://huggingface.co/hammad986",
+  leetcode: "https://leetcode.com/u/hammad986/",
   instagram: "https://www.instagram.com/mud_.hammad",
   email: "mailto:mdhammad2906@gmail.com",
   rawEmail: "mdhammad2906@gmail.com",
   phone: "+91 6369740522",
-  portfolio: "https://hammad986.dpdns.org"
+  portfolio: "https://hammad986.dpdns.org",
+  aetherion: "https://aetherionlabs.qzz.io"
 };
 
 export const navItems = [
@@ -1111,7 +1114,8 @@ Cloud and Data: AWS (SageMaker, Data Eng), Oracle OCI, Pandas, NumPy, Scikit-lea
   contact: `Email: mdhammad2906@gmail.com
 Phone: +91 6369740522
 GitHub: https://github.com/hammad986
-LinkedIn: https://www.linkedin.com/in/muhammed-hammad-42659726a
+LinkedIn: https://www.linkedin.com/in/hammad986/
+Hugging Face: https://huggingface.co/hammad986
 Portfolio: https://hammad986.dpdns.org`,
 
   hire: `Ready to build AI products together.

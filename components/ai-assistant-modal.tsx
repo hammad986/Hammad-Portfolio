@@ -111,7 +111,7 @@ export function AiAssistantModal({
           { title: "Download Image Toolkit .exe", link: "https://github.com/hammad986/Image-Toolkit-Pro/releases/latest/download/ImageToolkitPro.exe" }
         ];
       } else if (q.includes("hire") || q.includes("contact") || q.includes("available") || q.includes("email") || q.includes("phone")) {
-        reply = `**Status: Available for Hire and Engineering Roles**\n\n- **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)\n- **Phone**: +91 6369740522\n- **LinkedIn**: [linkedin.com/in/muhammed-hammad-42659726a](https://www.linkedin.com/in/muhammed-hammad-42659726a)\n- **GitHub**: [github.com/hammad986](https://github.com/hammad986)\n\nYou can also use the contact form at the bottom of this portfolio.`;
+        reply = `**Status: Available for Hire and Engineering Roles**\n\n- **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)\n- **Phone**: +91 6369740522\n- **LinkedIn**: [linkedin.com/in/hammad986](https://www.linkedin.com/in/hammad986/)\n- **GitHub**: [github.com/hammad986](https://github.com/hammad986)\n\nYou can also use the contact form at the bottom of this portfolio.`;
         sources = [
           { title: "Contact Section", link: "#contact" },
           { title: "Download Resume", link: "/assets/Muhammed_Hammad_S_Resume.pdf" }

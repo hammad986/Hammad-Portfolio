@@ -125,7 +125,11 @@ export default function RootLayout({
     image: `${siteUrl}/assets/my_pic.webp`,
     sameAs: [
       "https://github.com/hammad986",
-      "https://www.linkedin.com/in/muhammed-hammad-42659726a",
+      "https://www.linkedin.com/in/hammad986/",
+      "https://huggingface.co/hammad986",
+      "https://leetcode.com/u/hammad986/",
+      "https://github.com/Aetherionlabs986",
+      "https://aetherionlabs.qzz.io",
       "https://www.instagram.com/mud_.hammad"
     ],
     knowsAbout: [
