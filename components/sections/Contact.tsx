@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   Check,
+  Code2,
   Copy,
   Github,
   Instagram,
@@ -82,7 +83,7 @@ export function Contact() {
               <Link
                 href={socials.github}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
                 className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
@@ -96,21 +97,49 @@ export function Contact() {
               <Link
                 href={socials.linkedin}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
                 className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
                 <div className="flex items-center gap-3">
                   <Linkedin className="h-4 w-4 text-cyanCore" />
-                  <span>linkedin.com/in/muhammed-hammad</span>
+                  <span>linkedin.com/in/hammad986</span>
                 </div>
                 <span className="text-xs text-slate-400">Connect</span>
               </Link>
 
               <Link
+                href={socials.huggingface}
+                target="_blank"
+                rel="me noopener noreferrer"
+                onClick={() => sounds.playHover()}
+                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-base leading-none">🤗</span>
+                  <span>huggingface.co/hammad986</span>
+                </div>
+                <span className="text-xs text-slate-400">Models & Spaces</span>
+              </Link>
+
+              <Link
+                href={socials.leetcode}
+                target="_blank"
+                rel="me noopener noreferrer"
+                onClick={() => sounds.playHover()}
+                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+              >
+                <div className="flex items-center gap-3">
+                  <Code2 className="h-4 w-4 text-amber-400" />
+                  <span>leetcode.com/u/hammad986</span>
+                </div>
+                <span className="text-xs text-slate-400">Algorithms</span>
+              </Link>
+
+              <Link
                 href={socials.instagram}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
                 className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >

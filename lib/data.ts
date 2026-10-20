@@ -99,9 +99,9 @@ export type CertificateItem = {
 export const socials = {
   github: "https://github.com/hammad986",
   linkedin: "https://www.linkedin.com/in/hammad986/",
+  instagram: "https://www.instagram.com/mud_.hammad",
   huggingface: "https://huggingface.co/hammad986",
   leetcode: "https://leetcode.com/u/hammad986/",
-  instagram: "https://www.instagram.com/mud_.hammad",
   email: "mailto:mdhammad2906@gmail.com",
   rawEmail: "mdhammad2906@gmail.com",
   phone: "+91 6369740522",
@@ -1116,6 +1116,7 @@ Phone: +91 6369740522
 GitHub: https://github.com/hammad986
 LinkedIn: https://www.linkedin.com/in/hammad986/
 Hugging Face: https://huggingface.co/hammad986
+LeetCode: https://leetcode.com/u/hammad986/
 Portfolio: https://hammad986.dpdns.org`,
 
   hire: `Ready to build AI products together.
