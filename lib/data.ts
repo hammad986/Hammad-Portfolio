@@ -102,6 +102,7 @@ export const socials = {
   instagram: "https://www.instagram.com/mud_.hammad",
   huggingface: "https://huggingface.co/hammad986",
   leetcode: "https://leetcode.com/u/hammad986/",
+  kaggle: "https://www.kaggle.com/mdhamd",
   email: "mailto:mdhammad2906@gmail.com",
   rawEmail: "mdhammad2906@gmail.com",
   phone: "+91 6369740522",

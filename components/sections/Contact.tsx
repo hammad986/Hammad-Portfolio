@@ -137,6 +137,20 @@ export function Contact() {
               </Link>
 
               <Link
+                href={socials.kaggle}
+                target="_blank"
+                rel="me noopener noreferrer"
+                onClick={() => sounds.playHover()}
+                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-sm font-bold text-sky-400">k!</span>
+                  <span>kaggle.com/mdhamd</span>
+                </div>
+                <span className="text-xs text-slate-400">Notebooks & Datasets</span>
+              </Link>
+
+              <Link
                 href={socials.instagram}
                 target="_blank"
                 rel="me noopener noreferrer"

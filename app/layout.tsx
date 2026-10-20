@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "hammad986 github",
     "hammad986 huggingface",
     "hammad986 leetcode",
+    "hammad986 kaggle",
     "hammad986 linkedin",
     "hammad986.dpdns.org",
     "Muhammed Hammad",
@@ -131,6 +132,7 @@ export default function RootLayout({
       "https://www.linkedin.com/in/hammad986/",
       "https://huggingface.co/hammad986",
       "https://leetcode.com/u/hammad986/",
+      "https://www.kaggle.com/mdhamd",
       "https://github.com/Aetherionlabs986",
       "https://aetherionlabs.qzz.io",
       "https://www.instagram.com/mud_.hammad"
