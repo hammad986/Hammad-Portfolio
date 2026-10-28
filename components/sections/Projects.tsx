@@ -46,7 +46,7 @@ export function Projects({
   const filteredProjects = (
     selectedCategory === "all"
       ? projects
-      : projects.filter((p) => p.category === selectedCategory)
+      : projects.filter((p) => selectedCategory === "desktop" ? p.type === "Windows Desktop Application" : p.category === selectedCategory)
   ).slice(0, limit ?? projects.length);
 
   const handleThumbnailClick = (projectId: string, index: number, e: React.MouseEvent) => {
@@ -59,9 +59,9 @@ export function Projects({
     <section id="projects" className="px-3 sm:px-6 py-16 sm:py-24 z-10 relative">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Production Work & Case Studies"
-          title="Engineered systems with real quantifiable impact."
-          body="Each project represents a production-grade application engineered to solve specific real-world problems with verified working demos, source code, and measurable performance metrics."
+          eyebrow="Projects and Case Studies"
+          title="Applied AI and full-stack projects."
+          body="Explore project scope, technologies and screenshots. Demo and source availability are shown on each project page."
         />
 
         {/* Category Filters (Only shown when showFilters is true) */}
@@ -100,7 +100,7 @@ export function Projects({
                 <motion.article
                   key={project.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.96 }}
+                  initial={false}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
@@ -256,6 +256,7 @@ export function Projects({
                       ))}
                     </div>
                   </div>
+                  <div className="px-5 pb-5"><Link className="text-cyanCore underline text-sm" href={`/projects/${project.id}/`}>Read full case study</Link>{project.demoStatus && <p className="mt-2 text-xs text-amber-200">{project.demoStatus}</p>}</div>
                 </motion.article>
               );
             })}

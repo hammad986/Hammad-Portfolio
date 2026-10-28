@@ -69,6 +69,9 @@ export type Project = {
   tags?: string[];
   badge?: string;
   actions: ProjectAction[];
+  demoStatus?: string;
+  contribution?: string;
+  tradeoffs?: string;
   highlights: string[];
   architecture?: string;
 };
@@ -93,6 +96,8 @@ export type CertificateItem = {
   description: string;
   skills: string[];
   featured?: boolean;
+  verificationUrl?: string;
+  previewPath?: string;
   credentialBadge: string;
 };
 
@@ -159,15 +164,15 @@ export const projects: Project[] = [
     type: "CRM Pipeline Application",
     category: "saas",
     description:
-      "Full-cycle deal pipeline and client management system. Features drag-and-drop Kanban boards, encrypted local persistence, and real-time revenue analytics.",
+      "Full-cycle deal pipeline and client management system. Features drag-and-drop Kanban boards, local browser persistence, and real-time revenue analytics.",
     longDescription:
-      "DealFlow CRM is a full-featured client relationship and deal management system built for high-performance agencies and freelancers. It delivers a 100% client-side, zero-backend architecture with encrypted local persistence, drag-and-drop kanban boards, real-time revenue projection graphs, interactive calendar scheduling, and automated follow-up telemetry.",
+      "DealFlow CRM is a full-featured client relationship and deal management system built for high-performance agencies and freelancers. It delivers a client-side, zero-backend architecture with local browser persistence, drag-and-drop kanban boards, real-time revenue projection graphs, interactive calendar scheduling, and automated follow-up telemetry.",
     problem: "Freelancers and boutique agencies struggle with complex, expensive CRMs that lock data behind monthly subscriptions and slow multi-second cloud API calls.",
-    solution: "Built a zero-latency, 100% client-side CRM with reactive Zustand state management, hardware-accelerated drag-and-drop (dnd-kit), and encrypted browser storage.",
+    solution: "Built a client-side, client-side CRM with reactive Zustand state management, hardware-accelerated drag-and-drop (dnd-kit), and browser storage.",
     impactMetrics: [
-      "0ms backend latency with local encrypted persistence",
+      "Client-side deal management with browser persistence",
       "5 Kanban deal stages with instant drag-and-drop state sync",
-      "100% client privacy with zero third-party tracking"
+      "Local-first storage design"
     ],
     architectureSvg: "/assets/svg/dealflow_crm_architecture.svg",
     image: "/assets/dealflow-CRM/dashboard.webp",
@@ -181,9 +186,9 @@ export const projects: Project[] = [
     tech: ["Next.js 15", "TypeScript", "Tailwind CSS", "dnd-kit", "Zustand", "Recharts", "Lucide"],
     highlights: [
       "Dynamic Drag-and-Drop Deal Stage Pipeline with instant state synchronization",
-      "Zero-latency client-side analytics with Recharts visual telemetry",
+      "Client-side client-side analytics with Recharts visual telemetry",
       "Automated follow-up reminders, client directory, and appointment calendar",
-      "100% private: zero backend requirement with encrypted browser storage"
+      "Local-first workflow with browser storage"
     ],
     architecture: "Next.js 15 App Router + Zustand Reactive State + Web Storage + dnd-kit Drag Engine",
     actions: [
@@ -209,11 +214,11 @@ export const projects: Project[] = [
     longDescription:
       "Smart Doc AI is an intelligent document processing engine engineered to parse unstructured PDFs, invoices, and contracts into normalized JSON and tabular datasets. Designed with multi-model redundancy (Google Gemini, OpenAI, Claude fallback), document history indexing, OCR vision processing, and instant structured PDF/Excel export.",
     problem: "Manual document data entry from irregular PDFs, invoices, and contracts causes costly errors and takes upwards of 15 minutes per document.",
-    solution: "Engineered an automated multimodal vision-LLM pipeline that performs high-speed OCR, schema extraction, and JSON validation with zero-latency export.",
+    solution: "Engineered an automated multimodal vision-LLM pipeline that performs high-speed OCR, schema extraction, and JSON validation with client-side export.",
     impactMetrics: [
-      "99.2% structured extraction accuracy across irregular invoices",
-      "< 3.2s end-to-end processing per multi-page document",
-      "Multi-provider fallback eliminating API rate limit downtime"
+      "Document extraction into structured fields",
+      "Document-processing workflow with schema validation",
+      "Provider fallback workflow described in the project design"
     ],
     architectureSvg: "/assets/svg/smart_doc_ai_architecture.svg",
     image: "/assets/smart-ai-dashboard-images/dashboard.webp",
@@ -251,7 +256,7 @@ export const projects: Project[] = [
     problem: "Drafting winning client proposals requires hours of manual copywriting and scope estimation, leading to delayed pitches and lost deals.",
     solution: "Built a prompt-engineered Generative AI pipeline tailored for client psychology that generates structured scope breakdowns, pricing tiers, and branded PDFs.",
     impactMetrics: [
-      "85% reduction in proposal drafting time from 2 hours to 5 minutes",
+      "Proposal drafting with inline editing and PDF export",
       "Automated milestone breakdown and timeline estimation logic",
       "Instant client-ready PDF generation with corporate styling"
     ],
@@ -285,7 +290,7 @@ export const projects: Project[] = [
     description:
       "Desktop AI video question-answering application with multimodal audio-visual indexing, exact timestamp citations, and a standalone Windows installer.",
     longDescription:
-      "An advanced AI desktop software built to ingest long-form video files, extract visual and audio semantic streams, and provide interactive question-answering with exact timestamp citation evidence. Features local processing proofing, multi-provider analysis, video playback synchronization, and a certified Windows desktop installer workflow.",
+      "An advanced AI desktop software built to ingest long-form video files, extract visual and audio semantic streams, and provide interactive question-answering with exact timestamp citation evidence. Features local processing proofing, multi-provider analysis, video playback synchronization, and a Windows desktop installer workflow.",
     problem: "Finding specific moments or verifying statements across hours of video lectures, webinars, or surveillance footage requires tedious manual scrubbing.",
     solution: "Developed a desktop application integrating Whisper audio transcription and multimodal vision sampling with synchronized timestamp playback and citation proof.",
     impactMetrics: [
@@ -356,13 +361,8 @@ export const projects: Project[] = [
       "Ultra-responsive cyber-dark UI with glassmorphic command aesthetic"
     ],
     architecture: "Next.js App Router + WebSocket Mock / Stream Engine + Recharts Graphing + AI Copilot",
-    actions: [
-      {
-        type: "live",
-        label: "Live Dashboard",
-        href: "https://agent-6a19df3590f41d64a4dbae2e--nexus-ai-ops.netlify.app/dashboard"
-      }
-    ]
+    demoStatus: "Live demo unavailable. The previously linked deployment could not be reached.",
+    actions: []
   },
   {
     id: "image-toolkit-pro",
@@ -374,11 +374,11 @@ export const projects: Project[] = [
     longDescription:
       "Image Toolkit Pro is a high-performance desktop workstation utility engineered for computer vision practitioners, content creators, and power users. Built in Python with OpenCV acceleration, it provides a full drawing suite, live webcam stream recording, neural detection analytics, batch format transformations, and preference persistence.",
     problem: "Power users and computer vision practitioners often rely on bloated image editors that cannot perform batch processing or real-time webcam detection.",
-    solution: "Engineered a lightweight, multithreaded desktop workstation in Python with OpenCV hardware acceleration and zero external dependencies.",
+    solution: "Engineered a lightweight, multithreaded desktop workstation in Python with OpenCV hardware acceleration and a packaged Windows executable.",
     impactMetrics: [
-      "Hardware-accelerated real-time webcam frame processing at 60 FPS",
-      "Batch transformation pipeline capable of processing 100+ images in seconds",
-      "Zero-dependency standalone portable Windows executable release"
+      "Webcam capture and computer-vision processing",
+      "Batch image transformation workflow",
+      "Standalone portable Windows executable release"
     ],
     architectureSvg: "/assets/svg/image_toolkit_pro_architecture.svg",
     image: "/assets/imagetoolkit_images/01_workspace.webp",
@@ -395,7 +395,7 @@ export const projects: Project[] = [
       "Hardware-accelerated image drawing, filtering, and annotation tools",
       "Real-time webcam stream recording and object detection analytics",
       "Bulk batch processing for resolution scaling, format conversion, and watermarking",
-      "Zero-dependency Windows portable executable release"
+      "Windows portable executable release"
     ],
     architecture: "Python OpenCV Engine + Tkinter UI + Multithreaded Frame Processing + PyInstaller",
     actions: [
@@ -431,7 +431,7 @@ export const projects: Project[] = [
       "Real-time tax, discount, currency conversion, and line-item calculation engine",
       "Live dynamic PDF invoice generator with instant client preview",
       "Customizable business profile, payment bank details, and branding presets",
-      "Secure client-side persistence for historical invoices and recurring clients"
+      "Client-side persistence for historical invoices and recurring clients"
     ],
     architecture: "Next.js + Client-side Storage + jsPDF Render Pipeline",
     actions: [
@@ -451,8 +451,10 @@ export const certificatesList: CertificateItem[] = [
     title: "Supervised Machine Learning: Regression & Classification",
     issuer: "DeepLearning.AI & Stanford Online (Andrew Ng)",
     category: "AI & Machine Learning",
-    date: "Certified",
+    date: "Document provided",
+    verificationUrl: "https://coursera.org/verify/SGI9FKE5EYV5",
     filePath: "/assets/my certificates/andrew ng supervised machine learning certificate.pdf",
+    previewPath: "/assets/credential-previews/0e2a9bd394dc.webp",
     fileType: "pdf",
     description: "Foundational ML mastery covering linear/logistic regression, cost function minimization, gradient descent optimization, and regularization under Professor Andrew Ng.",
     skills: ["Machine Learning", "Supervised Learning", "Linear Regression", "Logistic Regression", "Cost Functions", "Gradient Descent"],
@@ -464,8 +466,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Introduction to Generative AI Studio",
     issuer: "Google Cloud Skills Boost",
     category: "AI & Machine Learning",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/introduction to den ai studio.pdf",
+    previewPath: "/assets/credential-previews/912434d3231f.webp",
     fileType: "pdf",
     description: "Enterprise generative AI workflows, model parameter tuning, prompt engineering, and multimodal foundation model deployment on Google Cloud Platform.",
     skills: ["Generative AI", "Google Cloud", "GenAI Studio", "Prompt Engineering", "Multimodal LLMs", "GCP"],
@@ -477,8 +480,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Introduction to Machine Learning on AWS",
     issuer: "Amazon Web Services (AWS)",
     category: "AI & Machine Learning",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/intro to ml - aws.pdf",
+    previewPath: "/assets/credential-previews/ad5f92f2b0f1.webp",
     fileType: "pdf",
     description: "Cloud-native ML principles, data preparation, SageMaker pipeline orchestration, and end-to-end model training lifecycles on AWS.",
     skills: ["AWS Machine Learning", "SageMaker", "Model Lifecycle", "Cloud ML", "AWS Services"],
@@ -490,8 +494,9 @@ export const certificatesList: CertificateItem[] = [
     title: "AWS Machine Learning Technical Essentials",
     issuer: "Amazon Web Services (AWS)",
     category: "AI & Machine Learning",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/ml tech AWS certi.pdf",
+    previewPath: "/assets/credential-previews/335f16bd8af4.webp",
     fileType: "pdf",
     description: "Technical deep-dive into AWS ML stack, SageMaker algorithms, natural language processing, and computer vision API integrations.",
     skills: ["AWS SageMaker", "NLP", "Computer Vision", "Technical ML", "Cloud Architecture"],
@@ -503,8 +508,9 @@ export const certificatesList: CertificateItem[] = [
     title: "GenAI Powered Data Analytics Job Simulation",
     issuer: "Deloitte Australia (Forage)",
     category: "AI & Machine Learning",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/GenAi Powered Data Analytics - Delloite Aus.pdf",
+    previewPath: "/assets/credential-previews/a602e19656b8.webp",
     fileType: "pdf",
     description: "Applied generative AI models to complex enterprise datasets, generating executive dashboards, automated query reasoning, and business strategy insights.",
     skills: ["GenAI Analytics", "Enterprise Data", "Deloitte Framework", "LLM Data Analysis", "Executive Insights"],
@@ -531,8 +537,9 @@ export const certificatesList: CertificateItem[] = [
     title: "AI/ML Engineering Internship Completion",
     issuer: "LabMentix Pvt. Ltd.",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/labmentix AIML Intern.pdf",
+    previewPath: "/assets/credential-previews/9f0cba6ae64e.webp",
     fileType: "pdf",
     description: "Hands-on machine learning workflow engineering, predictive modeling, feature engineering, and neural network experimentation.",
     skills: ["Machine Learning", "Python", "Data Modeling", "AI Systems", "Neural Networks"],
@@ -544,8 +551,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Official Recommendation & Experience Letter",
     issuer: "LabMentix Pvt. Ltd.",
     category: "Internships & Experience",
-    date: "Verified",
+    date: "Document provided",
     filePath: "/assets/my certificates/expirience letter by labmentix.pdf",
+    previewPath: "/assets/credential-previews/900110932186.webp",
     fileType: "pdf",
     description: "Formal Letter of Recommendation recognizing outstanding technical performance, innovative AI problem solving, and professional work ethic.",
     skills: ["Engineering Excellence", "Professional Endorsement", "AI Engineering", "Team Leadership"],
@@ -557,8 +565,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Data Science Internship Completion",
     issuer: "Saiket Systems",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/saiket system.pdf",
+    previewPath: "/assets/credential-previews/c4939e819a0a.webp",
     fileType: "pdf",
     description: "Comprehensive exploratory data analysis, statistical model building, ML benchmarking, and data visualization pipelines.",
     skills: ["Data Science", "EDA", "Statistical Analysis", "Scikit-Learn", "Data Wrangling"],
@@ -570,7 +579,7 @@ export const certificatesList: CertificateItem[] = [
     title: "Data Analytics Internship Certificate",
     issuer: "InAmbigous Solutions",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/inambigous-DA-intern.png",
     fileType: "image",
     description: "Business analytics, customer retention analysis, relational SQL query design, and interactive KPI executive dashboards.",
@@ -583,8 +592,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Python Development Internship Certificate",
     issuer: "Navodita Infotech",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/navodita.pdf",
+    previewPath: "/assets/credential-previews/132b401170a1.webp",
     fileType: "pdf",
     description: "Python backend engineering, script automation, data manipulation pipelines, and modular object-oriented software architecture.",
     skills: ["Python", "Automation", "OOP Architecture", "Scripting", "Backend Logic"],
@@ -596,7 +606,7 @@ export const certificatesList: CertificateItem[] = [
     title: "CodeBind Technologies - Inplant Training & Engineering",
     issuer: "CodeBind Technologies",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/codebind 1.jpg",
     fileType: "image",
     description: "Comprehensive inplant training in web engineering, client-server communication, database design, and software lifecycle.",
@@ -609,7 +619,7 @@ export const certificatesList: CertificateItem[] = [
     title: "CodeBind Technologies - Full Stack Web Workshop",
     issuer: "CodeBind Technologies",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/codebind 2.jpg",
     fileType: "image",
     description: "Intensive technical workshop covering responsive interface design, API integration, and front-end engineering.",
@@ -622,10 +632,10 @@ export const certificatesList: CertificateItem[] = [
     title: "CodeBind Technologies - Project Completion Certificate",
     issuer: "CodeBind Technologies",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/codebind 3.jpg",
     fileType: "image",
-    description: "Verified completion of web application project build adhering to production standards.",
+    description: "Web application project completion document.",
     skills: ["Project Delivery", "Full Stack Development", "Code Quality"],
     featured: false,
     credentialBadge: "CodeBind Technologies"
@@ -635,7 +645,7 @@ export const certificatesList: CertificateItem[] = [
     title: "CodeBind Technologies - Advanced Technical Training",
     issuer: "CodeBind Technologies",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/codebind 4.jpg",
     fileType: "image",
     description: "Hands-on software development training across software testing, logic optimization, and deployment.",
@@ -648,7 +658,7 @@ export const certificatesList: CertificateItem[] = [
     title: "CodeBind Technologies - Engineering Excellence & Participation",
     issuer: "CodeBind Technologies",
     category: "Internships & Experience",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/codebind 5.jpg",
     fileType: "image",
     description: "Recognition of outstanding participation and technical problem solving during technology training programs.",
@@ -663,8 +673,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Data Analytics Consulting Job Simulation",
     issuer: "Deloitte Australia (Forage)",
     category: "Data Science & Analytics",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/Data Analytics-Delloite Aus.pdf",
+    previewPath: "/assets/credential-previews/92c794d4742a.webp",
     fileType: "pdf",
     description: "Real-world consulting scenario analyzing customer demographics, segmentation, data cleaning, and executive presentation storytelling.",
     skills: ["Data Analytics", "Customer Segmentation", "Data Wrangling", "Business Consulting", "Tableau/Excel"],
@@ -676,8 +687,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Data Visualisation: Empowering Business with Effective Insights",
     issuer: "Deloitte / Tata (Forage)",
     category: "Data Science & Analytics",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/Data Visualisation-Delloite Aus.pdf",
+    previewPath: "/assets/credential-previews/6d892193490f.webp",
     fileType: "pdf",
     description: "Executive chart design, storytelling with data, KPI mapping, and creating actionable decision-making visual dashboards.",
     skills: ["Data Visualization", "Executive Dashboards", "KPI Mapping", "Business Storytelling"],
@@ -689,8 +701,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Technology & Data Analytics Masterclass",
     issuer: "Deloitte Australia",
     category: "Data Science & Analytics",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/delloite australia certification.pdf",
+    previewPath: "/assets/credential-previews/85aa1d3a2d6d.webp",
     fileType: "pdf",
     description: "Consulting methodology, enterprise analytical workflows, and structured technical problem formulation.",
     skills: ["Enterprise Analytics", "Consulting Framework", "Data Strategy"],
@@ -702,8 +715,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Data Analytics Professional Certification",
     issuer: "InAmbigous Solutions",
     category: "Data Science & Analytics",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/inambigous-data analytics.pdf",
+    previewPath: "/assets/credential-previews/b9c915ca1b59.webp",
     fileType: "pdf",
     description: "Advanced relational data modeling, query optimization, KPI telemetry, and predictive customer modeling.",
     skills: ["Data Analytics", "SQL Modeling", "Predictive Analytics", "Business Metrics"],
@@ -715,8 +729,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Data Science For All Professional Certificate",
     issuer: "Global Data Science Institute",
     category: "Data Science & Analytics",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/data science for all.pdf",
+    previewPath: "/assets/credential-previews/9a3ccda96f26.webp",
     fileType: "pdf",
     description: "Data science foundational principles, statistical hypothesis testing, data visualization, and applied ML algorithms.",
     skills: ["Data Science", "Hypothesis Testing", "Python", "Data Wrangling", "Machine Learning"],
@@ -728,8 +743,9 @@ export const certificatesList: CertificateItem[] = [
     title: "The Ultimate Job Ready Data Science Mastery",
     issuer: "Data Science Academy",
     category: "Data Science & Analytics",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/The_Ultimate_Job_Ready_Data_Science_Course_Certificate.pdf",
+    previewPath: "/assets/credential-previews/df91d968d74f.webp",
     fileType: "pdf",
     description: "Comprehensive end-to-end curriculum covering Pandas, NumPy, Scikit-learn, statistical modeling, feature engineering, and model evaluation.",
     skills: ["Python", "NumPy", "Pandas", "Scikit-Learn", "Model Evaluation", "Data Pipelines"],
@@ -743,7 +759,7 @@ export const certificatesList: CertificateItem[] = [
     title: "Oracle Cloud Infrastructure (OCI) Foundations",
     issuer: "Oracle University",
     category: "Cloud & Infrastructure",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/oracle Cloud infra certificate.png",
     fileType: "image",
     description: "Cloud computing fundamentals, OCI core compute architectures, Virtual Cloud Networks (VCN), IAM security policies, and Autonomous Database storage.",
@@ -756,8 +772,9 @@ export const certificatesList: CertificateItem[] = [
     title: "AWS Certified Data Engineer Associate (DEA-C01)",
     issuer: "Amazon Web Services",
     category: "Cloud & Infrastructure",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/data-eng-associate-AWS-certi.pdf",
+    previewPath: "/assets/credential-previews/7380ed2ec22a.webp",
     fileType: "pdf",
     description: "Scalable data lake architecture, AWS Glue ETL orchestration, Amazon Athena, Amazon Redshift, and secure data streaming with Kinesis.",
     skills: ["AWS Data Engineering", "AWS Glue", "Amazon Redshift", "Athena", "ETL Pipelines", "Data Lakes"],
@@ -769,8 +786,9 @@ export const certificatesList: CertificateItem[] = [
     title: "AWS Solutions Architecture & Cloud Foundations",
     issuer: "Amazon Web Services Training",
     category: "Cloud & Infrastructure",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/aws completion certi.pdf",
+    previewPath: "/assets/credential-previews/e679d9adaaec.webp",
     fileType: "pdf",
     description: "Architecting resilient, highly available cloud systems, S3 storage tiers, VPC networking, and security governance on AWS.",
     skills: ["AWS Cloud", "Solutions Architecture", "EC2/S3/VPC", "High Availability"],
@@ -782,8 +800,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Digital 101 - 30 Hours Technology Foundation",
     issuer: "NASSCOM FutureSkills Prime",
     category: "Cloud & Infrastructure",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/Digital 101 - 30 hours NASSCOM.pdf",
+    previewPath: "/assets/credential-previews/105d3ba2836f.webp",
     fileType: "pdf",
     description: "Government and industry-accredited 30-hour comprehensive program covering cloud computing, big data, cybersecurity, and digital ecosystems.",
     skills: ["NASSCOM Accredited", "Cloud Foundations", "Digital Transformation", "Emerging Tech"],
@@ -795,8 +814,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Cloud Infrastructure Architecture Certificate",
     issuer: "Global Cloud Institute",
     category: "Cloud & Infrastructure",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/certificate-8wwmoapgbtur-1781420184.pdf",
+    previewPath: "/assets/credential-previews/9cd3d5601dd8.webp",
     fileType: "pdf",
     description: "Scalable cloud deployment architectures, containerization fundamentals, serverless computing, and enterprise security.",
     skills: ["Cloud Computing", "Containerization", "Serverless", "Security"],
@@ -808,8 +828,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Technical Systems & Infrastructure Specialist",
     issuer: "Global Cloud Institute",
     category: "Cloud & Infrastructure",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/certificate-94ndt4eihrne-1781421142.pdf",
+    previewPath: "/assets/credential-previews/2da59b369f24.webp",
     fileType: "pdf",
     description: "Core technical infrastructure operations, distributed systems concepts, and operational telemetry monitoring.",
     skills: ["Distributed Systems", "Infrastructure", "Telemetry", "Reliability"],
@@ -823,8 +844,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Complete 2025 Python Bootcamp: Zero to Hero",
     issuer: "Udemy / Global Academy",
     category: "Development & Programming",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/[English]_Complete_2025_Python_Bootcamp__Learn_Python_from_Scratch_Certificate.pdf",
+    previewPath: "/assets/credential-previews/da80fdbd97a0.webp",
     fileType: "pdf",
     description: "In-depth Python programming: OOP architecture, decorators, generators, asynchronous execution, web APIs, unit testing, and automation scripts.",
     skills: ["Python 3", "OOP Architecture", "Decorators & Generators", "AsyncIO", "Unit Testing", "APIs"],
@@ -836,8 +858,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Advanced Python for Data Science & AI",
     issuer: "Professional Tech Academy",
     category: "Development & Programming",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/python_certificates.pdf",
+    previewPath: "/assets/credential-previews/a91a9b83ebf3.webp",
     fileType: "pdf",
     description: "High-performance Python computing: NumPy vectorized math, Pandas dataframes, file IO automation, and API integration architectures.",
     skills: ["Python", "NumPy Vectorization", "Data Pipelines", "Performance Scripting"],
@@ -853,6 +876,7 @@ export const certificatesList: CertificateItem[] = [
     category: "Professional Programs",
     date: "Honored",
     filePath: "/assets/my certificates/Partnership Excelence Certificate.pdf",
+    previewPath: "/assets/credential-previews/57e90a304bf6.webp",
     fileType: "pdf",
     description: "Recognized for exemplary innovation, collaborative problem solving, and technological contributions by IIT Guwahati industry partner initiatives.",
     skills: ["IIT Guwahati Honor", "Innovation Excellence", "Problem Solving", "Technical Leadership"],
@@ -864,8 +888,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Problem Solving with AI & Technical Documentation",
     issuer: "KultureHire AI Institute",
     category: "Professional Programs",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/problem Solving with AI and documentation_certificate.pdf",
+    previewPath: "/assets/credential-previews/648c13ed3519.webp",
     fileType: "pdf",
     description: "AI-assisted technical architecture design, system documentation drafting, prompt workflows, and structured engineering communication.",
     skills: ["AI Problem Solving", "System Specs", "Technical Documentation", "Prompt Engineering"],
@@ -877,8 +902,9 @@ export const certificatesList: CertificateItem[] = [
     title: "NISM Financial Markets & Quantitative Analytics",
     issuer: "National Institute of Securities Markets (NISM)",
     category: "Professional Programs",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/NISM certificate.pdf",
+    previewPath: "/assets/credential-previews/3308956a8f66.webp",
     fileType: "pdf",
     description: "Securities market mechanics, quantitative financial risk models, algorithmic market structures, and compliance frameworks.",
     skills: ["NISM Certified", "Financial Analytics", "Securities Markets", "Risk Modeling"],
@@ -892,6 +918,7 @@ export const certificatesList: CertificateItem[] = [
     category: "Professional Programs",
     date: "Honored",
     filePath: "/assets/my certificates/IEIESC-cer.pdf",
+    previewPath: "/assets/credential-previews/0b23f522b089.webp",
     fileType: "pdf",
     description: "Technical engineering accolade recognizing excellence in engineering logic, innovation, and active technical participation.",
     skills: ["IEI Technical Recognition", "Engineering Innovation", "System Design"],
@@ -903,8 +930,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Naan Mudhalvan Advanced AI & Data Analytics",
     issuer: "Tamil Nadu Skill Development Corporation (TNSDC)",
     category: "Professional Programs",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/naan mudhalvan cer.pdf",
+    previewPath: "/assets/credential-previews/69a6ef9e6664.webp",
     fileType: "pdf",
     description: "Government-accredited advanced skill certification in emerging AI technologies, machine learning algorithms, and real-world data analytics pipelines.",
     skills: ["Naan Mudhalvan", "Government Accredited", "Emerging AI", "Data Analytics"],
@@ -916,8 +944,9 @@ export const certificatesList: CertificateItem[] = [
     title: "Naan Mudhalvan Technical Specialist Certification",
     issuer: "Tamil Nadu Skill Development Corporation (TNSDC)",
     category: "Professional Programs",
-    date: "Certified",
+    date: "Document provided",
     filePath: "/assets/my certificates/naan mudhalvan cer1.pdf",
+    previewPath: "/assets/credential-previews/dae1644dec6d.webp",
     fileType: "pdf",
     description: "Specialized technical training certification in modern computational software, algorithmic logic, and industry application engineering.",
     skills: ["TNSDC Govt.", "Software Logic", "Computational Methods"],
@@ -983,11 +1012,18 @@ export const experience = [
   }
 ];
 
+export const portfolioCounts = {
+  projects: projects.length,
+  credentials: certificatesList.length,
+  internships: experience.length,
+  windowsApps: projects.filter(project => project.type === "Windows Desktop Application").length
+};
+
 export const metrics = [
-  { value: String(projects.length), label: "Production & AI Projects", icon: Code2 },
-  { value: String(certificatesList.length), label: "Verified Credentials", icon: Award },
-  { value: String(experience.length), label: "Industry Internships", icon: BriefcaseBusiness },
-  { value: String(projects.filter((project) => project.category === "desktop").length), label: "Windows Desktop Apps", icon: MonitorDown }
+  { value: String(portfolioCounts.projects), label: "Featured Projects", icon: Code2 },
+  { value: String(portfolioCounts.credentials), label: "Credential Documents", icon: Award },
+  { value: String(portfolioCounts.internships), label: "Industry Internships", icon: BriefcaseBusiness },
+  { value: String(portfolioCounts.windowsApps), label: "Windows Desktop Apps", icon: MonitorDown }
 ];
 
 export const skillGroups = [
@@ -1062,7 +1098,7 @@ export const skillGroups = [
 
 export const githubStats = [
   { label: "Open Source", value: "Public", detail: "AI applications, dashboards, desktop tools and libraries" },
-  { label: "Commit Activity", value: "Active", detail: "Regular production commits and generative AI experiments" },
+  { label: "Commit Activity", value: "Active", detail: "Public repositories and generative AI experiments" },
   { label: "Core Focus", value: "AI Engineering", detail: "Applied GenAI, autonomous systems and desktop utilities" }
 ];
 
@@ -1070,7 +1106,7 @@ export const aetherionHighlights = [
   { icon: Bot, label: "Autonomous intelligence", desc: "Self-directing agent swarms capable of goal planning." },
   { icon: Network, label: "Agentic workflows", desc: "Dynamic multi-step reasoning with tool orchestration." },
   { icon: FileText, label: "Deep knowledge systems", desc: "Hybrid semantic & graph RAG knowledge indexing." },
-  { icon: MonitorDown, label: "Product-grade interfaces", desc: "Zero-latency real-time telemetry and fluid user control." }
+  { icon: MonitorDown, label: "Product-grade interfaces", desc: "Client-side real-time telemetry and fluid user control." }
 ];
 
 export const terminalCommands = {
@@ -1078,7 +1114,7 @@ export const terminalCommands = {
   about      - Learn about Muhammed Hammad and engineering philosophy
   skills     - View core technology stack and AI specialties
   projects   - List featured live AI products and desktop apps
-  certs      - View a summary of verified credentials
+  certs      - View a summary of credential documents
   contact    - Get direct email, phone, and social handles
   hire       - Reasons to hire Hammad and a quick contact CTA
   clear      - Clear the console screen
@@ -1087,23 +1123,17 @@ export const terminalCommands = {
   about: `Muhammed Hammad | AI/ML Engineer and Full-Stack GenAI Builder
 Location: India | Open for Global Remote and High-Impact Roles
 Focus: Engineering intelligent systems, autonomous agent swarms, and product-grade AI applications.
-Currently developing Aetherion AI as an AI/ML engineering intern at ThirdVizion.`,
+See the Experience page and resume for the existing timeline. ThirdVizion dates are awaiting owner confirmation.`,
 
   skills: `AI & ML: Generative AI, RAG Systems, Autonomous Agents, LLM Fine-Tuning, OpenCV, Whisper
 Languages: Python, TypeScript, JavaScript, SQL, PHP, Bash
 Frontend: Next.js 15, React 19, Three.js/WebGL, Tailwind CSS, Framer Motion
 Cloud and Data: AWS (SageMaker, Data Eng), Oracle OCI, Pandas, NumPy, Scikit-learn`,
 
-  projects: `1. DealFlow CRM - Advanced client pipeline and analytics (Live)
-2. Smart Doc AI - Multimodal document intelligence platform (Live)
-3. AI Proposal Writer - Generative AI client proposal SaaS (Live)
-4. Advanced Video QA System - Desktop multimodal video analysis (.exe)
-5. Nexus AI Ops - AI operations and real-time telemetry dashboard (Live)
-6. Image Toolkit Pro - Computer vision desktop workstation (.exe)
-7. Invoice Gen Pro - Dynamic financial billing SaaS
-8. Grok Bot - Procedural SVG avatar engine (React and vanilla JS)`,
+  projects: `${portfolioCounts.projects} featured projects, ${portfolioCounts.windowsApps} Windows applications:
+${projects.map((p,i) => `${i+1}. ${p.title} - ${p.type}${p.demoStatus ? " (demo unavailable)" : ""}\n   /projects/${p.id}/`).join("\n")}`,
 
-  certs: `Verified industry credentials spanning:
+  certs: `Credential documents covering:
 - Stanford / DeepLearning.AI Supervised Machine Learning (Andrew Ng)
 - Google Cloud Generative AI Studio
 - AWS Machine Learning and AWS Data Engineer Associate (DEA-C01)
@@ -1121,7 +1151,7 @@ LeetCode: https://leetcode.com/u/hammad986/
 Portfolio: https://hammad986.dpdns.org`,
 
   hire: `Ready to build AI products together.
-- Proven track record across AI applications and verified credentials
+- Proven track record across AI applications and credential documents
 - Full lifecycle AI engineering: from LLM reasoning to polished web and desktop UIs
 - Fast, proactive communicator with a relentless drive for excellence.
 Email: mdhammad2906@gmail.com to start the conversation.`,

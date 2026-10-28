@@ -1,4 +1,6 @@
 "use client";
+import { createPortal } from "react-dom";
+import { useDialog } from "./use-dialog";
 
 import { useEffect, useRef, useState } from "react";
 import { Terminal as TerminalIcon, X, CornerDownLeft, Sparkles, Copy, Check } from "lucide-react";
@@ -89,13 +91,18 @@ Direct contact: mdhammad2906@gmail.com | +91 6369740522`;
     executeCommand(input);
   };
 
+  const dialogRef = useDialog(isOpen, onClose);
+
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <AnimatePresence>
       <div
         className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-background/80 backdrop-blur-xl"
-        role="dialog"
+        ref={dialogRef}
+      tabIndex={-1}
+      aria-label="Portfolio terminal"
+      role="dialog"
         aria-modal="true"
       >
         <motion.div
@@ -210,5 +217,5 @@ Direct contact: mdhammad2906@gmail.com | +91 6369740522`;
         </motion.div>
       </div>
     </AnimatePresence>
-  );
+  , document.body);
 }

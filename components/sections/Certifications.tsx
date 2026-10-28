@@ -61,7 +61,7 @@ export function CertificationsAndStack({
       return matchesCategory && matchesQuery;
     });
 
-    return limit ? list.slice(0, limit) : list;
+    return limit ? [...list].sort((a,b)=>Number(!!b.featured)-Number(!!a.featured)).slice(0, limit) : list;
   }, [selectedCategory, searchQuery, limit]);
 
   const categoryCounts = useMemo(() => {
@@ -76,9 +76,9 @@ export function CertificationsAndStack({
     <section id="certifications" className="px-3 sm:px-6 py-16 sm:py-24 z-10 relative">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Credentials and Verified Mastery"
-          title={`${certificatesList.length} Verified Industry Certifications`}
-          body="A collection of verified credentials across AI/ML engineering, data science, cloud architecture, government accreditations, and industry internships."
+          eyebrow="Credentials and Learning"
+          title={`${certificatesList.length} Credential Documents`}
+          body="A collection of credential documents across AI/ML engineering, data science, cloud architecture, government accreditations, and industry internships."
         />
 
         {/* Search & Category Filter Controls */}
@@ -93,6 +93,7 @@ export function CertificationsAndStack({
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search by keyword, skill, or issuer (e.g. 'AWS', 'Deloitte', 'Python', 'Stanford')..."
+                  aria-label="Search credentials"
                   className="w-full rounded-2xl border border-cyan-500/25 bg-[#080E21] pl-11 pr-4 py-3 text-xs sm:text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-500 focus:bg-[#0C132C] focus:ring-1 focus:ring-cyan-500"
                 />
               </div>
@@ -118,7 +119,7 @@ export function CertificationsAndStack({
                     <span
                       className={`rounded-md px-1.5 py-0.5 text-[10px] font-mono ${
                         selectedCategory === cat.id
-                          ? "bg-white/20 text-white font-bold"
+                          ? "bg-slate-200 text-slate-900 font-bold"
                           : "bg-cyan-500/10 text-cyanCore font-semibold"
                       }`}
                     >
@@ -131,6 +132,7 @@ export function CertificationsAndStack({
           </div>
         )}
 
+        <p className="text-sm text-slate-300">Course completions, internship documents and professional programs are listed separately. Issuer verification is linked only where a credential-specific URL is available.</p>
         {/* Certificate Cards Grid */}
         <div className="mt-8 sm:mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
@@ -138,14 +140,10 @@ export function CertificationsAndStack({
               <motion.article
                 key={cert.id}
                 layout
-                initial={{ opacity: 0, scale: 0.96 }}
+                initial={false}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.25 }}
-                onClick={() => {
-                  sounds.playClick();
-                  setActiveCert(cert);
-                }}
                 className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-cyan-500/20 bg-[#080E21] p-4 sm:p-5 shadow-[0_20px_60px_rgba(5,8,20,0.8)] transition-all duration-300 hover:border-cyan-500/50 hover:bg-[#0C132C] hover:shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_30px_rgba(0,242,254,0.15)] hover:-translate-y-1 cursor-pointer"
               >
                 <div>
@@ -190,11 +188,9 @@ export function CertificationsAndStack({
                 <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3 text-xs">
                   <span className="flex items-center gap-1.5 text-emerald-400 text-[11px] font-semibold">
                     <ShieldCheck className="h-3.5 w-3.5" />
-                    Verified Authenticity
+                    Document available
                   </span>
-                  <span className="text-[11px] font-bold text-cyanCore group-hover:translate-x-1 transition-transform">
-                    Preview ↗
-                  </span>
+                  <button className="text-[11px] font-bold text-cyanCore p-2" onClick={() => setActiveCert(cert)} aria-label={`Preview ${cert.title}`}>Preview ↗</button>
                 </div>
               </motion.article>
             ))}

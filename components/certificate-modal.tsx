@@ -1,4 +1,6 @@
 "use client";
+import { createPortal } from "react-dom";
+import { useDialog } from "./use-dialog";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -48,6 +50,8 @@ export function CertificateModal({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
+  const dialogRef = useDialog(!!certificate, onClose);
+
   if (!certificate) return null;
 
   const currentIndex = certificatesList.findIndex((c) => c.id === certificate.id);
@@ -65,9 +69,12 @@ export function CertificateModal({
     setTimeout(() => setCopiedLink(false), 2000);
   };
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-[#050814]/90 backdrop-blur-xl"
+      ref={dialogRef}
+      tabIndex={-1}
+      aria-label="Credential preview"
       role="dialog"
       aria-modal="true"
     >
@@ -140,16 +147,13 @@ export function CertificateModal({
           </div>
         </div>
 
+        {certificate.verificationUrl && <a className="px-5 py-3 text-cyanCore underline" href={certificate.verificationUrl} target="_blank" rel="noopener noreferrer">Check this credential with its issuer</a>}
         {/* Viewer Content Area */}
         <div className="flex-1 grid lg:grid-cols-[1fr_320px] overflow-hidden">
           {/* Main Document / PDF / Image Viewport */}
           <div className="relative h-full w-full bg-[#050814] flex items-center justify-center p-3 sm:p-4 overflow-hidden border-b lg:border-b-0 lg:border-r border-cyan-500/15">
             {certificate.fileType === "pdf" ? (
-              <iframe
-                src={`${certificate.filePath}#toolbar=0&navpanes=0&scrollbar=1`}
-                title={certificate.title}
-                className="h-full w-full rounded-2xl border border-white/10 bg-white shadow-2xl"
-              />
+              <div tabIndex={0} role="region" aria-label="Credential first-page preview" className="h-full w-full overflow-y-auto text-center"><p className="mb-2 text-xs text-slate-300">First-page preview. Open or download the original PDF for all pages.</p><Image src={certificate.previewPath!} alt={`${certificate.title} first page`} width={1200} height={1600} className="h-auto w-full" /></div>
             ) : (
               <div className="relative h-full w-full">
                 <Image
@@ -173,7 +177,7 @@ export function CertificateModal({
                 <p className="text-base font-bold text-white mt-0.5">{certificate.issuer}</p>
                 <div className="mt-1 flex items-center gap-2 text-xs text-slate-400 font-mono">
                   <Calendar className="h-3.5 w-3.5 text-slate-500" />
-                  <span>Issued: {certificate.date}</span>
+                  <span>Record status: {certificate.date}</span>
                 </div>
               </div>
 
@@ -188,7 +192,7 @@ export function CertificateModal({
 
               <div>
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 block mb-2">
-                  Verified Skills:
+                  Related skills:
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {certificate.skills.map((s) => (
@@ -204,7 +208,7 @@ export function CertificateModal({
 
               <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-3 text-xs text-emerald-300 flex items-center gap-2 font-semibold">
                 <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-400" />
-                <span>Verified Official Credential Document</span>
+                <span>Provided credential document</span>
               </div>
             </div>
 
@@ -236,5 +240,5 @@ export function CertificateModal({
         </div>
       </motion.div>
     </div>
-  );
+  , document.body);
 }

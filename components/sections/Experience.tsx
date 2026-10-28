@@ -24,7 +24,7 @@ export function Experience() {
             return (
               <motion.div
                 key={`${item.role}-${item.company}`}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, delay: index * 0.05 }}
@@ -89,7 +89,7 @@ export function Experience() {
                       )}
                     >
                       <ShieldCheck className="h-3.5 w-3.5" />
-                      <span>Verified Completion in Credentials Vault</span>
+                      <span>Completion document in credentials library</span>
                     </div>
                   )}
                 </div>

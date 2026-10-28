@@ -16,7 +16,7 @@
 > **Role:** AI/ML Engineer and Full-Stack Developer
 > **Status:** Open to full-time and contract roles
 
-This repository contains the production source for the portfolio of Muhammed Hammad (hammad986). It is a statically exported Next.js site built for fast loads, semantic markup, and structured SEO data.
+This repository contains the production source for the portfolio of Muhammed Hammad (hammad986). It is a statically exported Next.js site built for static hosting, semantic markup, and structured SEO data.
 
 ---
 
@@ -26,7 +26,7 @@ This repository contains the production source for the portfolio of Muhammed Ham
 /
 ├── /              Home overview (hero, highlights, top projects and credentials)
 ├── /projects      Production builds, case studies, and architecture diagrams
-├── /certifications Verified credentials vault with keyword search and document viewer
+├── /certifications Credential document library with keyword search and document viewer
 ├── /experience    Career and internship timeline
 ├── /about         Systems philosophy and interactive AI pipeline simulator
 ├── /contact       Direct contact channels and enquiry form
@@ -38,9 +38,9 @@ This repository contains the production source for the portfolio of Muhammed Ham
 
 ## Features
 
-- **Ask Hammad AI Assistant**: an offline, client-side assistant that answers from the portfolio knowledge base with source links.
+- **Portfolio FAQ**: transparent local question search, without an AI model or RAG backend.
 - **AI Pipeline Simulator**: an interactive multi-agent reasoning playground with execution steps and latency readouts.
-- **Verified Credentials Vault**: searchable catalog of credentials with an in-browser PDF and image viewer.
+- **Credential document library**: searchable catalog of credentials with an in-browser PDF and image viewer.
 - **Production Case Studies**: problem, solution, outcome, and system architecture for each project.
 - **3D WebGL scene**: a Three.js scene positioned so it never overlaps the primary content.
 - **Command palette**: keyboard-driven navigation via `Cmd+K` / `Ctrl+K`.
@@ -93,8 +93,8 @@ The repository includes `.node-version`, `.nvmrc`, `public/_headers`, and `publi
 ### Setup
 
 ```bash
-git clone https://github.com/hammad986/portfolio.git
-cd portfolio
+git clone https://github.com/hammad986/Hammad-Portfolio.git
+cd Hammad-Portfolio
 npm install
 npm run dev
 ```
@@ -168,3 +168,20 @@ The static build is written to `out/`.
 ## License
 
 MIT License © 2026 Muhammed Hammad.
+
+## Audit improvements and validation
+
+See `docs/CONFIRMATIONS.md` for unresolved personal details and `docs/DEPENDENCY-REVIEW.md` for dependency decisions. Individual project pages use static `generateStaticParams`, so the existing Cloudflare static-export deployment remains supported.
+
+```bash
+npm ci
+npm run lint
+npx tsc --noEmit
+npm run build
+npm test
+npm audit
+```
+
+The Portfolio FAQ is local search, not a model or RAG service. The architecture walkthrough is illustrative. Credential PDF previews show only the first page; original documents remain downloadable. Optional animated skills are loaded on demand. Sound is off until enabled, with a local saved preference.
+
+Do not assume `npm run start` serves the exported production site. For local production inspection, serve `out/` with a static HTTP server. No deployment occurs during the validation commands above. Git-connected production and preview rules must be reviewed before pushing changes.

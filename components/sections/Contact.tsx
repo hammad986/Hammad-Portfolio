@@ -37,7 +37,7 @@ export function Contact() {
           body="Reach out for full-stack AI engineering roles, product builds, generative AI pipelines, or technical consultations."
         />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="mt-12 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           {/* Direct Communication Channels Card */}
           <div className="rounded-3xl border border-cyan-500/20 bg-[#080E21] p-6 sm:p-8 shadow-[0_20px_70px_rgba(5,8,20,0.8)] space-y-6">
             <div>
@@ -54,12 +54,12 @@ export function Contact() {
 
             {/* Quick One-Click Email Copy Box */}
             <div className="rounded-2xl border border-cyan-500/25 bg-[#0C132C] p-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <div>
                   <p className="text-[11px] font-bold text-cyan-200 uppercase tracking-wider">
                     Primary Email
                   </p>
-                  <p className="text-sm font-mono text-white mt-0.5 font-semibold">
+                  <p className="break-all text-sm font-mono text-white mt-0.5 font-semibold">
                     {socials.rawEmail}
                   </p>
                 </div>
@@ -85,9 +85,9 @@ export function Contact() {
                 target="_blank"
                 rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
-                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+                className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 flex-wrap items-center gap-3">
                   <Github className="h-4 w-4 text-cyanCore" />
                   <span>github.com/hammad986</span>
                 </div>
@@ -99,9 +99,9 @@ export function Contact() {
                 target="_blank"
                 rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
-                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+                className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 flex-wrap items-center gap-3">
                   <Linkedin className="h-4 w-4 text-cyanCore" />
                   <span>linkedin.com/in/hammad986</span>
                 </div>
@@ -113,9 +113,9 @@ export function Contact() {
                 target="_blank"
                 rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
-                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+                className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 flex-wrap items-center gap-3">
                   <span className="text-base leading-none">🤗</span>
                   <span>huggingface.co/hammad986</span>
                 </div>
@@ -127,9 +127,9 @@ export function Contact() {
                 target="_blank"
                 rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
-                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+                className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 flex-wrap items-center gap-3">
                   <Code2 className="h-4 w-4 text-amber-400" />
                   <span>leetcode.com/u/hammad986</span>
                 </div>
@@ -141,9 +141,9 @@ export function Contact() {
                 target="_blank"
                 rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
-                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+                className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 flex-wrap items-center gap-3">
                   <span className="text-sm font-bold text-sky-400">k!</span>
                   <span>kaggle.com/mdhamd</span>
                 </div>
@@ -155,17 +155,17 @@ export function Contact() {
                 target="_blank"
                 rel="me noopener noreferrer"
                 onClick={() => sounds.playHover()}
-                className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
+                className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300 hover:border-cyan-500/50 hover:text-white transition"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 flex-wrap items-center gap-3">
                   <Instagram className="h-4 w-4 text-cyanCore" />
                   <span>@mud_.hammad</span>
                 </div>
                 <span className="text-xs text-slate-400">Follow</span>
               </Link>
 
-              <div className="flex items-center justify-between rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-cyan-500/15 bg-[#0C132C] p-3 text-slate-300">
+                <div className="flex min-w-0 flex-wrap items-center gap-3">
                   <Phone className="h-4 w-4 text-cyanCore" />
                   <span>{socials.phone}</span>
                 </div>

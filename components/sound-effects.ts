@@ -3,7 +3,7 @@
 // Web Audio API Sound Synthesizer for high-tech cybernetic UI interactions
 class SoundManager {
   private ctx: AudioContext | null = null;
-  private isMuted: boolean = false;
+  private isMuted: boolean = true;
 
   private getContext(): AudioContext | null {
     if (typeof window === "undefined") return null;
@@ -21,10 +21,12 @@ class SoundManager {
 
   public toggleMute(): boolean {
     this.isMuted = !this.isMuted;
+    try { localStorage.setItem("portfolio-sound", this.isMuted ? "off" : "on"); } catch {}
     return this.isMuted;
   }
 
   public getMuted(): boolean {
+    try { this.isMuted = localStorage.getItem("portfolio-sound") !== "on"; } catch {}
     return this.isMuted;
   }
 

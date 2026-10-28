@@ -24,7 +24,7 @@ interface CertificationsProps {
 
 export function PortfolioPage() {
   return (
-    <main id="home" className="pb-16">
+    <main id="main-content" className="pb-16">
       <Hero />
       <Metrics />
       <Projects limit={3} showFilters={false} showViewAllButton={true} />

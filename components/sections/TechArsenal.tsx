@@ -1,12 +1,15 @@
 "use client";
 
+import { useState } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { skillGroups } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
-import { TechSphere3D } from "@/components/tech-sphere-3d";
+const TechSphere3D = dynamic(() => import("@/components/tech-sphere-3d").then(m=>m.TechSphere3D), {ssr:false});
 import { sounds } from "@/components/sound-effects";
 
 export function TechArsenal() {
+  const [showSphere,setShowSphere] = useState(false);
   return (
     <section id="tech-arsenal" className="px-4 sm:px-6 py-24 z-10 relative">
       <div className="mx-auto max-w-7xl">
@@ -20,12 +23,12 @@ export function TechArsenal() {
         <div className="mt-12 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] items-center">
           {/* Left Column: Interactive 3D Tech Sphere */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={false}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <TechSphere3D />
+            <button className="rounded-lg border border-cyan-500/30 p-3" onClick={()=>setShowSphere(v=>!v)} aria-expanded={showSphere}>{showSphere ? "Hide animated skills sphere" : "Load optional animated skills sphere"}</button>{showSphere && <div className="overflow-hidden" aria-hidden="true"><TechSphere3D /></div>}
           </motion.div>
 
           {/* Right Column: Categorized Skill Matrix */}
@@ -33,7 +36,7 @@ export function TechArsenal() {
             {skillGroups.map((group, index) => (
               <motion.article
                 key={group.title}
-                initial={{ opacity: 0, y: 15 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: index * 0.04 }}
@@ -49,16 +52,16 @@ export function TechArsenal() {
                   </h3>
                 </div>
 
-                <div className="mt-3.5 flex flex-wrap gap-1.5">
+                <ul className="mt-3.5 flex flex-wrap gap-1.5" aria-label={group.title}>
                   {group.items.map((item) => (
-                    <span
+                    <li
                       key={item}
                       className="rounded-lg border border-cyan-500/15 bg-[#0C132C] px-2.5 py-1 text-xs text-slate-300 transition hover:border-cyan-500/50 hover:bg-cyan-500/15 hover:text-white"
                     >
                       {item}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </motion.article>
             ))}
           </div>

@@ -1,4 +1,6 @@
 "use client";
+import { createPortal } from "react-dom";
+import { useDialog } from "./use-dialog";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -55,6 +57,8 @@ export function CommandPalette({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
+  const dialogRef = useDialog(isOpen, onClose);
+
   if (!isOpen) return null;
 
   const filteredSections = navItems.filter((item) =>
@@ -67,9 +71,12 @@ export function CommandPalette({
     p.tech.some((t) => t.toLowerCase().includes(query.toLowerCase()))
   );
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-slate-950/80 backdrop-blur-xl"
+      ref={dialogRef}
+      tabIndex={-1}
+      aria-label="Portfolio search"
       role="dialog"
       aria-modal="true"
     >
@@ -89,6 +96,7 @@ export function CommandPalette({
             autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            aria-label="Search portfolio"
             placeholder="Type a command, project, or section to navigate..."
             className="flex-1 bg-transparent text-sm text-white placeholder:text-slate-400 outline-none"
           />
@@ -114,9 +122,9 @@ export function CommandPalette({
               >
                 <div className="flex items-center gap-2.5">
                   <Bot className="h-4 w-4 text-cyanCore" />
-                  <span className="font-semibold">Ask Hammad AI Assistant</span>
+                  <span className="font-semibold">Portfolio FAQ</span>
                 </div>
-                <span className="font-mono text-[10px] text-cyanCore">AI Agent</span>
+                <span className="font-mono text-[10px] text-cyanCore">Local FAQ</span>
               </button>
 
               <button
@@ -142,7 +150,7 @@ export function CommandPalette({
               >
                 <div className="flex items-center gap-2.5">
                   <Download className="h-4 w-4 text-emeraldCore" />
-                  <span className="font-semibold">Download Verified Resume PDF</span>
+                  <span className="font-semibold">Download Resume PDF</span>
                 </div>
                 <span className="font-mono text-[10px] text-emeraldCore">PDF</span>
               </a>
@@ -184,7 +192,7 @@ export function CommandPalette({
                 {filteredProjects.slice(0, 4).map((p) => (
                   <a
                     key={p.id}
-                    href="/projects"
+                    href={`/projects/${p.id}/`}
                     onClick={() => {
                       sounds.playClick();
                       onClose();
@@ -206,5 +214,5 @@ export function CommandPalette({
         </div>
       </motion.div>
     </div>
-  );
+  , document.body);
 }

@@ -21,7 +21,7 @@ export function About() {
         <div className="mt-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] items-stretch">
           {/* Engineering Profile Card */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4 }}
@@ -34,7 +34,7 @@ export function About() {
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-white">Full-Stack AI Engineering</h3>
-                  <span className="text-xs font-mono text-cyanCore">Silicon Valley Standards</span>
+                  <span className="text-xs font-mono text-cyanCore">Applied AI and web development</span>
                 </div>
               </div>
 
@@ -42,13 +42,13 @@ export function About() {
                 I build end-to-end software systems that combine mathematical AI foundations with high-velocity product execution. 
               </p>
               <p className="text-xs sm:text-sm leading-relaxed text-slate-400 font-normal">
-                My work spans multimodal document intelligence engines, real-time computer vision utilities, offline-first client CRMs, and autonomous agent workflows. Every project is shipped with live demo links, source code, and verified performance benchmarks.
+                My portfolio covers document extraction, video question answering, computer vision and client-side web tools. Project pages describe the available implementation, screenshots and links. Benchmarks are included only when their methodology is documented.
               </p>
             </div>
 
             <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
               <span className="text-emerald-400 flex items-center gap-1">
-                <ShieldCheck className="h-3.5 w-3.5" /> 100% Deployed Proof
+                <ShieldCheck className="h-3.5 w-3.5" /> Project documentation
               </span>
               <span className="text-cyanCore">Next.js 15 • Python • WebGL</span>
             </div>
@@ -56,7 +56,7 @@ export function About() {
 
           {/* 3 Core Production Tenets */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4 }}
@@ -65,18 +65,18 @@ export function About() {
             {[
               {
                 icon: Cpu,
-                title: "Deterministic AI Output",
-                desc: "Strict Pydantic JSON schema validators and self-correction loops to eliminate hallucinations in production."
+                title: "Structured AI Output",
+                desc: "Schema validation helps check output shape. It does not guarantee factual accuracy; source review remains necessary."
               },
               {
                 icon: ShieldCheck,
-                title: "Zero-Latency Local State",
-                desc: "Encrypted client-side persistence and Zustand reactive state for instant 0ms user interactions."
+                title: "Local State Management",
+                desc: "Client-side state and browser persistence support local workflows. Storage should not be assumed encrypted or suitable for sensitive data."
               },
               {
                 icon: Code2,
-                title: "Full Hardware Efficiency",
-                desc: "Multithreaded Python & OpenCV processing delivering 60 FPS real-time webcam frame analytics."
+                title: "Desktop Computer Vision",
+                desc: "Python and OpenCV support video and image workflows. Performance depends on hardware, input and configuration."
               }
             ].map((item) => (
               <div

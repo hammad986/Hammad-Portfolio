@@ -43,7 +43,7 @@ export function Footer() {
           <Link href="/terms" className="transition hover:text-white">
             Terms and Conditions
           </Link>
-          <span className="text-slate-500">
+          <span className="text-slate-400">
             Built with Next.js 15, Three.js and Python
           </span>
         </nav>

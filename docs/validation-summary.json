@@ -1,0 +1,194 @@
+[
+  {
+    "route": "/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/certifications/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/about/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/experience/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/contact/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/privacy/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/terms/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/dealflow-crm/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/smart-doc-ai/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/ai-proposal-writer/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/advanced-video-qa/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/nexus-ai-ops/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/image-toolkit-pro/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "route": "/projects/invoice-gen-pro/",
+    "h1": 1,
+    "violations": []
+  },
+  {
+    "faq": {
+      "focusInside": true,
+      "faqClosed": true,
+      "nexus": true
+    }
+  },
+  {
+    "terminalClosed": true
+  },
+  {
+    "credentialAxe": []
+  },
+  {
+    "credentialDialogClosed": true,
+    "issuerLink": "https://coursera.org/verify/SGI9FKE5EYV5"
+  },
+  {
+    "width": 1280,
+    "route": "/",
+    "overflow": false,
+    "cta": 576.796875
+  },
+  {
+    "width": 1280,
+    "route": "/projects/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 1280,
+    "route": "/certifications/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 1280,
+    "route": "/about/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 1280,
+    "route": "/projects/advanced-video-qa/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "overflow": false,
+    "cta": 522
+  },
+  {
+    "width": 390,
+    "route": "/projects/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 390,
+    "route": "/certifications/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 390,
+    "route": "/about/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 390,
+    "route": "/projects/advanced-video-qa/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 320,
+    "route": "/",
+    "overflow": false,
+    "cta": 548
+  },
+  {
+    "width": 320,
+    "route": "/projects/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 320,
+    "route": "/certifications/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 320,
+    "route": "/about/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "width": 320,
+    "route": "/projects/advanced-video-qa/",
+    "overflow": false,
+    "cta": null
+  },
+  {
+    "logoURL": "http://127.0.0.1:4173/#home"
+  },
+  {
+    "noJsHero": true,
+    "noJsCTA": true
+  },
+  {
+    "errors": []
+  }
+]

@@ -1,4 +1,6 @@
 "use client";
+import { createPortal } from "react-dom";
+import { useDialog } from "./use-dialog";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -52,6 +54,8 @@ export function ProjectModal({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
+  const dialogRef = useDialog(!!project, onClose);
+
   if (!project) return null;
 
   const images = project.gallery?.length ? project.gallery : [project.image];
@@ -61,9 +65,12 @@ export function ProjectModal({
   const nextProject =
     currentIndex < projectsList.length - 1 ? projectsList[currentIndex + 1] : projectsList[0];
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#050814]/90 backdrop-blur-xl"
+      ref={dialogRef}
+      tabIndex={-1}
+      aria-label="Project details"
       role="dialog"
       aria-modal="true"
     >
@@ -190,7 +197,7 @@ export function ProjectModal({
           {project.impactMetrics && project.impactMetrics.length > 0 && (
             <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
               <span className="text-xs font-mono font-bold text-emerald-400 uppercase flex items-center gap-1.5 mb-2">
-                <TrendingUp className="h-4 w-4" /> Quantified Outcome & Metrics
+                <TrendingUp className="h-4 w-4" /> Implementation notes
               </span>
               <div className="grid gap-2 sm:grid-cols-3">
                 {project.impactMetrics.map((metric) => (
@@ -204,26 +211,6 @@ export function ProjectModal({
           )}
 
           {/* System Architecture Blueprint */}
-          {project.architectureSvg && (
-            <div className="rounded-2xl border border-cyan-500/20 bg-[#0C132C] p-4">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-mono font-bold text-cyanCore uppercase flex items-center gap-1.5">
-                  <Workflow className="h-4 w-4" /> System Architecture Diagram
-                </span>
-                <span className="text-[10px] font-mono text-slate-400">Interactive SVG Blueprint</span>
-              </div>
-              <div className="relative aspect-[16/7] w-full overflow-hidden rounded-xl border border-white/10 bg-[#050814] p-3 flex items-center justify-center">
-                <Image
-                  src={project.architectureSvg}
-                  alt={`${project.title} Architecture`}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 1024px) 100vw, 896px"
-                />
-              </div>
-            </div>
-          )}
-
           {/* Technical Stack */}
           <div>
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 block mb-2">
@@ -276,5 +263,5 @@ export function ProjectModal({
         </div>
       </motion.div>
     </div>
-  );
+  , document.body);
 }

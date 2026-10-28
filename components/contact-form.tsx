@@ -97,9 +97,9 @@ export function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-3xl border border-white/10 bg-white/[0.025] p-6 sm:p-8 shadow-appleGlass backdrop-blur-3xl"
+      className="min-w-0 rounded-3xl border border-white/10 bg-white/[0.025] p-6 sm:p-8 shadow-appleGlass backdrop-blur-3xl"
     >
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2">
         <label className="space-y-2 text-xs font-medium text-slate-300">
           Your Name
           <input
@@ -107,7 +107,7 @@ export function ContactForm() {
             name="name"
             autoComplete="name"
             placeholder="Jane Doe"
-            className="h-11 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
+            className="h-11 min-w-0 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
           />
         </label>
         <label className="space-y-2 text-xs font-medium text-slate-300">
@@ -118,7 +118,7 @@ export function ContactForm() {
             type="email"
             autoComplete="email"
             placeholder="jane@company.com"
-            className="h-11 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
+            className="h-11 min-w-0 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
           />
         </label>
       </div>
@@ -128,7 +128,7 @@ export function ContactForm() {
           required
           name="subject"
           placeholder="AI Engineering Project / Collaboration"
-          className="h-11 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
+          className="h-11 min-w-0 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
         />
       </label>
       <label className="mt-4 block space-y-2 text-xs font-medium text-slate-300">
@@ -138,7 +138,7 @@ export function ContactForm() {
           name="message"
           rows={4}
           placeholder="Tell me about your project, timeline, or engineering goals..."
-          className="w-full resize-none rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
+          className="min-w-0 w-full resize-none rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-white/25 focus:bg-white/[0.04]"
         />
       </label>
       <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

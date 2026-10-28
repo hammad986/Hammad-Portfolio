@@ -16,7 +16,7 @@ const sections = [
   },
   {
     heading: "Analytics",
-    body: "This site does not use third-party analytics, advertising trackers, or profiling cookies. No visitor data is collected for marketing purposes."
+    body: "The live site loads Cloudflare Web Analytics and real-user performance reporting. These services process visit and performance information. This portfolio does not use advertising trackers. Consult Cloudflare’s privacy policy for its processing practices."
   },
   {
     heading: "Contact form",
@@ -28,7 +28,7 @@ const sections = [
   },
   {
     heading: "Third-party services",
-    body: "The site is hosted on Cloudflare Pages. The contact form is delivered by EmailJS. Each provider processes data under its own privacy policy."
+    body: "The site is hosted on Cloudflare Pages. The contact form is delivered by EmailJS. The Portfolio FAQ runs locally without sending search text to an AI service. External profile, project and issuer links open third-party sites; document previews use files hosted with this site. Each provider processes data under its own privacy policy."
   },
   {
     heading: "Your choices",
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
   return (
     <>
       <Header />
-      <main className="px-4 sm:px-6 pt-28 pb-20">
+      <main id="main-content" className="px-4 sm:px-6 pt-28 pb-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyanCore">
             Legal
@@ -53,7 +53,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="mt-4 text-sm text-slate-400">
-            Last updated: October 13, 2026
+            Last updated: October 28, 2026
           </p>
 
           <div className="mt-10 space-y-8">

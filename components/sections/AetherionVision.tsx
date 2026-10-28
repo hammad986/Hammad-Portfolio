@@ -19,7 +19,7 @@ export function AetherionVision() {
 
   return (
     <section className="px-4 sm:px-6 pb-16 z-10 relative">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-bluecore/40 bg-[radial-gradient(circle_at_18%_15%,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_85%_85%,rgba(168,85,247,0.2),transparent_40%),linear-gradient(135deg,rgba(11,16,32,0.9),rgba(13,19,40,0.95))] p-6 sm:p-10 shadow-[0_20px_70px_rgba(0,0,0,0.8),0_0_50px_rgba(59,130,246,0.2)] backdrop-blur-2xl">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-bluecore/40 bg-[radial-gradient(circle_at_18%_15%,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_85%_85%,rgba(0,198,255,0.2),transparent_40%),linear-gradient(135deg,rgba(11,16,32,0.9),rgba(13,19,40,0.95))] p-6 sm:p-10 shadow-[0_20px_70px_rgba(0,0,0,0.8),0_0_50px_rgba(59,130,246,0.2)] backdrop-blur-2xl">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3.5 py-1 text-xs font-medium text-slate-300 backdrop-blur-md">
@@ -110,7 +110,7 @@ export function AetherionVision() {
           />
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
             className="relative z-10 w-full max-w-2xl rounded-3xl border border-bluecore/40 bg-slate-950/95 p-6 sm:p-8 shadow-2xl backdrop-blur-3xl"
           >

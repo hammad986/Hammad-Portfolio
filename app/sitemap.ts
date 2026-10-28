@@ -1,3 +1,4 @@
+import { projects } from "@/lib/data";
 import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
@@ -8,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return [
+    ...projects.map(p=>({url:`${siteUrl}/projects/${p.id}/`,lastModified,changeFrequency:"monthly" as const,priority:0.7})),
     {
       url: `${siteUrl}/`,
       lastModified,

@@ -16,23 +16,18 @@ import { buttonVariants } from "@/components/ui/button";
 import { certificatesList, socials } from "@/lib/data";
 import { sounds } from "@/components/sound-effects";
 
-const CommandScene = dynamic(
-  () => import("@/components/command-scene").then((mod) => mod.CommandScene),
-  { ssr: false }
-);
-
 export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[90vh] items-center overflow-hidden pt-32 pb-16"
+      className="relative flex min-h-[90vh] items-center overflow-hidden pt-24 sm:pt-32 pb-12"
     >
       {/* 3D WebGL Canvas (safely placed on the far right) */}
-      <CommandScene />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-8 sm:gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         {/* Left Column: Profile Card */}
-        <div className="relative mx-auto w-full max-w-sm">
+        <div className="relative order-2 lg:order-1 mx-auto w-full max-w-[240px] sm:max-w-sm">
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#080E21] p-3.5 shadow-[0_20px_60px_rgba(5,8,20,0.8)]">
             {/* Availability Beacon */}
             <div className="absolute left-6 top-6 z-20 flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-[#050814]/90 px-3 py-1 text-xs font-medium text-emerald-400 backdrop-blur-md">
@@ -68,10 +63,10 @@ export function Hero() {
         </div>
 
         {/* Right Column */}
-        <div className="space-y-6">
+        <div className="order-1 lg:order-2 min-w-0 space-y-5">
           {/* Eyebrow Label */}
-          <div className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-slate-300">
-            <span>Full-Stack AI Engineering and Applied Systems</span>
+          <div className="inline-flex max-w-full items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-slate-300">
+            <span className="break-words">AI Engineering and Full-Stack Development</span>
           </div>
 
           {/* Name and Role */}
@@ -89,9 +84,7 @@ export function Hero() {
 
           {/* Value Proposition */}
           <p className="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            I build production generative AI platforms, retrieval and agent
-            systems, and full-stack web applications. Every project ships with a
-            live demo, source code, and verified results.
+            B.Tech CSBS student, graduating in 2027. I build Python, generative AI and full-stack applications, from video question answering to document extraction.
           </p>
 
           {/* Action Buttons */}
@@ -124,7 +117,7 @@ export function Hero() {
             </Link>
 
             <Link
-              href="/certifications"
+              href="/contact/"
               onClick={() => sounds.playClick()}
               className={buttonVariants({
                 variant: "secondary",
@@ -133,9 +126,11 @@ export function Hero() {
               })}
             >
               <Award className="mr-2 h-4 w-4 text-emeraldCore" />
-              {certificatesList.length} credentials
+              Contact me
             </Link>
           </div>
+
+          <p className="text-sm text-slate-300">Selected work: <Link className="text-cyanCore underline" href="/projects/advanced-video-qa/">Video QA</Link> · <Link className="text-cyanCore underline" href="/projects/smart-doc-ai/">Smart Doc AI</Link> · <Link className="text-cyanCore underline" href="/projects/dealflow-crm/">DealFlow CRM</Link></p>
 
           {/* Social Handles */}
           <div className="flex items-center gap-3 pt-2">

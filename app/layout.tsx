@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     siteName: "Muhammed Hammad Portfolio",
     images: [
       {
-        url: "/assets/my_pic.webp",
+        url: "/assets/social-preview.jpg",
         width: 1200,
         height: 630,
         alt: "Muhammed Hammad (hammad986), AI/ML Engineer"
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description:
       "AI/ML engineer and full-stack developer (hammad986) building production generative AI systems and web applications.",
-    images: ["/assets/my_pic.webp"]
+    images: ["/assets/social-preview.jpg"]
   },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
@@ -171,6 +171,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark scroll-smooth ${inter.variable} font-sans`}>
       <body>
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Providers>{children}</Providers>
         <Script
           id="person-schema"

@@ -14,9 +14,9 @@ export default function ProjectsPage() {
   return (
     <>
       <Header />
-      <div className="pt-16">
+      <main id="main-content" className="pt-16">
         <Projects />
-      </div>
+      </main>
       <Footer />
     </>
   );

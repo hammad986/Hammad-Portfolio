@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About & Systems Architecture",
   description:
-    "Systems philosophy, an interactive AI agent and RAG pipeline simulator, and the technical ecosystem of Muhammed Hammad (hammad986).",
+    "Systems philosophy, an illustrative architecture walkthrough, and the technical ecosystem of Muhammed Hammad (hammad986).",
   alternates: { canonical: "https://hammad986.dpdns.org/about/" }
 };
 
@@ -15,10 +15,10 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <div className="pt-16">
+      <main id="main-content" className="pt-16">
         <About />
         <TechArsenal />
-      </div>
+      </main>
       <Footer />
     </>
   );

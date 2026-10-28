@@ -14,9 +14,9 @@ export default function ExperiencePage() {
   return (
     <>
       <Header />
-      <div className="pt-16">
+      <main id="main-content" className="pt-16">
         <Experience />
-      </div>
+      </main>
       <Footer />
     </>
   );

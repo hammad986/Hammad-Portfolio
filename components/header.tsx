@@ -28,9 +28,10 @@ export function Header() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
   const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
+    setIsMuted(sounds.getMuted());
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll);
@@ -57,7 +58,7 @@ export function Header() {
         >
           {/* Brand Logo & Name */}
           <Link
-            href="#home"
+            href="/#home"
             onClick={() => sounds.playHover()}
             className="flex items-center gap-2.5 group"
           >
@@ -93,17 +94,18 @@ export function Header() {
 
           {/* Quick Action Dock */}
           <div className="flex items-center gap-2">
-            {/* Ask AI Assistant Button */}
+            {/* FAQ Assistant Button */}
             <button
               onClick={() => {
                 sounds.playClick();
                 setIsAiAssistantOpen(true);
               }}
               className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:border-white/25 hover:text-white"
-              title="Ask Hammad AI Assistant"
+              title="Open Portfolio FAQ"
+              aria-label="Open Portfolio FAQ"
             >
               <Bot className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">Ask AI</span>
+              <span className="hidden sm:inline">FAQ</span>
             </button>
 
             {/* Command Palette Trigger */}
@@ -138,7 +140,8 @@ export function Header() {
               onClick={toggleSound}
               className="grid h-8 w-8 place-items-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-400 hover:text-white transition"
               title={isMuted ? "Unmute Sounds" : "Mute Sounds"}
-              aria-label="Toggle Sound"
+              aria-label={isMuted ? "Enable sound" : "Disable sound"}
+              aria-pressed={!isMuted}
             >
               {isMuted ? (
                 <VolumeX className="h-3.5 w-3.5 text-slate-600" />
@@ -166,6 +169,8 @@ export function Header() {
             {/* Mobile Drawer Button */}
             <button
               className="lg:hidden grid h-8 w-8 place-items-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-300"
+              aria-expanded={open}
+              aria-controls="mobile-navigation"
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => {
                 sounds.playClick();
@@ -179,7 +184,7 @@ export function Header() {
 
         {/* Mobile Dropdown */}
         {open && (
-          <div className="mx-auto mt-2 max-w-7xl rounded-2xl border border-cyan-500/25 bg-[#080E21]/95 p-4 shadow-2xl backdrop-blur-xl lg:hidden">
+          <div id="mobile-navigation" className="mx-auto mt-2 max-w-7xl rounded-2xl border border-cyan-500/25 bg-[#080E21]/95 p-4 shadow-2xl backdrop-blur-xl lg:hidden">
             <div className="grid gap-1">
               {navItems.map((item) => (
                 <Link
@@ -203,7 +208,7 @@ export function Header() {
                   className="flex-1 rounded-xl border border-cyan-500/30 bg-cyan-500/15 py-2 text-xs font-semibold text-cyanCore text-center flex items-center justify-center gap-1.5"
                 >
                   <Bot className="h-3.5 w-3.5" />
-                  Ask AI Bot
+                  Portfolio FAQ
                 </button>
                 <Link
                   href="/assets/Muhammed_Hammad_S_Resume.pdf"
@@ -226,7 +231,7 @@ export function Header() {
         onClose={() => setIsTerminalOpen(false)}
       />
 
-      {/* AI Assistant Modal */}
+      {/* Portfolio FAQ Modal */}
       <AiAssistantModal
         isOpen={isAiAssistantOpen}
         onClose={() => setIsAiAssistantOpen(false)}

@@ -11,7 +11,7 @@ export function Metrics() {
         {metrics.map((metric, index) => (
           <motion.div
             key={metric.label}
-            initial={{ opacity: 0, y: 15 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: index * 0.04 }}

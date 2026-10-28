@@ -52,7 +52,7 @@ export default function TermsPage() {
   return (
     <>
       <Header />
-      <main className="px-4 sm:px-6 pt-28 pb-20">
+      <main id="main-content" className="px-4 sm:px-6 pt-28 pb-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyanCore">
             Legal
