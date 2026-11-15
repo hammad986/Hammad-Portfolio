@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Experience & Internships",
   description:
     "Engineering trajectory and industry internships at ThirdVizion, Saiket Systems, InAmbigous, and LabMentix with verified completion records.",
-  alternates: { canonical: "https://hammad986.dpdns.org/experience/" }
+  alternates: { canonical: "https://hammad986.me/experience/" }
 };
 
 export default function ExperiencePage() {

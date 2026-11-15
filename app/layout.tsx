@@ -6,7 +6,7 @@ import { Providers } from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
-const siteUrl = "https://hammad986.dpdns.org";
+const siteUrl = "https://hammad986.me";
 const personName = "Muhammed Hammad";
 const handle = "hammad986";
 const defaultTitle =
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "hammad986 leetcode",
     "hammad986 kaggle",
     "hammad986 linkedin",
-    "hammad986.dpdns.org",
+    "hammad986.me",
     "Muhammed Hammad",
     "Muhammed Hammad portfolio",
     "Muhammed Hammad S",
@@ -123,7 +123,7 @@ export default function RootLayout({
     "@type": "Person",
     "@id": `${siteUrl}/#person`,
     name: personName,
-    alternateName: [handle, "hammad986.dpdns.org"],
+    alternateName: [handle, "hammad986.me"],
     identifier: handle,
     jobTitle: "AI/ML Engineer and Full-Stack Developer",
     email: "mailto:mdhammad2906@gmail.com",

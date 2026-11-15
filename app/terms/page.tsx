@@ -5,8 +5,8 @@ import { Footer } from "@/components/sections/Footer";
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
-    "Terms and conditions for using the portfolio of Muhammed Hammad (hammad986) at hammad986.dpdns.org.",
-  alternates: { canonical: "https://hammad986.dpdns.org/terms/" }
+    "Terms and conditions for using the portfolio of Muhammed Hammad (hammad986) at hammad986.me.",
+  alternates: { canonical: "https://hammad986.me/terms/" }
 };
 
 const sections = [

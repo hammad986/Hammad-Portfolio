@@ -5,8 +5,8 @@ import { Footer } from "@/components/sections/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Muhammed Hammad (hammad986) handles analytics and contact form data on hammad986.dpdns.org.",
-  alternates: { canonical: "https://hammad986.dpdns.org/privacy/" }
+    "How Muhammed Hammad (hammad986) handles analytics and contact form data on hammad986.me.",
+  alternates: { canonical: "https://hammad986.me/privacy/" }
 };
 
 const sections = [

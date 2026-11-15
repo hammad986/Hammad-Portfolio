@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const siteUrl = "https://hammad986.dpdns.org";
+const siteUrl = "https://hammad986.me";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

@@ -111,7 +111,7 @@ export const socials = {
   email: "mailto:mdhammad2906@gmail.com",
   rawEmail: "mdhammad2906@gmail.com",
   phone: "+91 6369740522",
-  portfolio: "https://hammad986.dpdns.org",
+  portfolio: "https://hammad986.me",
   aetherion: "https://aetherionlabs.qzz.io"
 };
 
@@ -1148,7 +1148,7 @@ GitHub: https://github.com/hammad986
 LinkedIn: https://www.linkedin.com/in/hammad986/
 Hugging Face: https://huggingface.co/hammad986
 LeetCode: https://leetcode.com/u/hammad986/
-Portfolio: https://hammad986.dpdns.org`,
+Portfolio: https://hammad986.me`,
 
   hire: `Ready to build AI products together.
 - Proven track record across AI applications and credential documents

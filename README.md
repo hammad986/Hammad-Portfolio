@@ -1,7 +1,7 @@
 # Muhammed Hammad | AI/ML Engineer and Full-Stack Developer
 
-[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-hammad986.dpdns.org-00F2FE?style=for-the-badge&logo=googlechrome&logoColor=black)](https://hammad986.dpdns.org)
-[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20On-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://hammad986.dpdns.org)
+[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-hammad986.me-00F2FE?style=for-the-badge&logo=googlechrome&logoColor=black)](https://hammad986.me)
+[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20On-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://hammad986.me)
 [![Next.js 15](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript%205-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@
 
 ## Overview
 
-> **Live website:** [https://hammad986.dpdns.org](https://hammad986.dpdns.org)
+> **Live website:** [https://hammad986.me](https://hammad986.me)
 > **Role:** AI/ML Engineer and Full-Stack Developer
 > **Status:** Open to full-time and contract roles
 
@@ -156,7 +156,7 @@ The static build is written to `out/`.
 
 ## Contact
 
-- **Website**: [hammad986.dpdns.org](https://hammad986.dpdns.org)
+- **Website**: [hammad986.me](https://hammad986.me)
 - **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)
 - **LinkedIn**: [linkedin.com/in/muhammed-hammad-42659726a](https://www.linkedin.com/in/muhammed-hammad-42659726a)
 - **GitHub**: [@hammad986](https://github.com/hammad986)

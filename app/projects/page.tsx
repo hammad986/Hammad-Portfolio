@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Projects & Case Studies",
   description:
     "Production AI applications, SaaS platforms, desktop utilities, and engineering case studies built by Muhammed Hammad (hammad986).",
-  alternates: { canonical: "https://hammad986.dpdns.org/projects/" }
+  alternates: { canonical: "https://hammad986.me/projects/" }
 };
 
 export default function ProjectsPage() {

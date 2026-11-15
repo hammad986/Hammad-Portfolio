@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "About & Systems Architecture",
   description:
     "Systems philosophy, an illustrative architecture walkthrough, and the technical ecosystem of Muhammed Hammad (hammad986).",
-  alternates: { canonical: "https://hammad986.dpdns.org/about/" }
+  alternates: { canonical: "https://hammad986.me/about/" }
 };
 
 export default function AboutPage() {

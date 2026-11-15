@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Contact & Collaboration",
   description:
     "Direct communication channels, contact form, and engineering inquiries for Muhammed Hammad (hammad986).",
-  alternates: { canonical: "https://hammad986.dpdns.org/contact/" }
+  alternates: { canonical: "https://hammad986.me/contact/" }
 };
 
 export default function ContactPage() {
