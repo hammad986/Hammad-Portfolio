@@ -36,7 +36,7 @@ export function Experience() {
                 <div
                   onMouseEnter={() => sounds.playHover()}
                   className={cn(
-                    "group relative rounded-3xl border border-cyan-500/20 bg-[#080E21] p-6 shadow-[0_20px_60px_rgba(5,8,20,0.8)] transition-all duration-300 hover:border-cyan-500/50 hover:bg-[#0C132C] hover:shadow-[0_20px_60px_rgba(0,242,254,0.15)] hover:-translate-y-1",
+                    "group relative ml-8 sm:ml-0 rounded-2xl sm:rounded-3xl border border-cyan-500/20 bg-[#080E21] p-4 sm:p-6 shadow-[0_20px_60px_rgba(5,8,20,0.8)] transition-all duration-300 hover:border-cyan-500/50 hover:bg-[#0C132C] hover:shadow-[0_20px_60px_rgba(0,242,254,0.15)] hover:-translate-y-1",
                     index % 2 === 1 ? "sm:col-start-1" : "sm:col-start-2"
                   )}
                 >

@@ -4,106 +4,107 @@
 [![Cloudflare Pages](https://img.shields.io/badge/Deployed%20On-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://hammad986.me)
 [![Next.js 15](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript%205-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TypeScript 5](https://img.shields.io/badge/TypeScript%205-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Security RFC 9116](https://img.shields.io/badge/Security.txt-RFC%209116-00F5A0?style=for-the-badge&logo=shield)](https://hammad986.me/.well-known/security.txt)
 [![License: MIT](https://img.shields.io/badge/License-MIT-00F5A0.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ---
 
 ## Overview
 
-> **Live website:** [https://hammad986.me](https://hammad986.me)
-> **Role:** AI/ML Engineer and Full-Stack Developer
-> **Status:** Open to full-time and contract roles
+> **Live Website:** [https://hammad986.me](https://hammad986.me)  
+> **Role:** AI/ML Engineer and Full-Stack Developer  
+> **Education:** B.Tech in Computer Science & Business Systems (CSBS, 2023–2027)  
+> **Status:** Open to full-time, contract, and high-impact engineering roles  
 
-This repository contains the production source for the portfolio of Muhammed Hammad (hammad986). It is a statically exported Next.js site built for static hosting, semantic markup, and structured SEO data.
+This repository contains the production source code for the personal portfolio of **Muhammed Hammad (hammad986)**. It is a high-performance Next.js application built with static export (`output: "export"`), Cloudflare Pages deployment, semantic HTML5, Schema.org JSON-LD structured data, and responsive design tailored for mobile, tablet, and desktop viewports.
 
 ---
 
-## Pages
+## Core Features & Interactive Capabilities
 
-```
+- **Interactive AI Pipeline Simulator**: Multi-step cognitive reasoning playground demonstrating document OCR, chunking, embedding generation, vector indexing, and grounded LLM synthesis with real-time simulated latency metrics.
+- **Developer Terminal CLI**: In-browser keyboard-driven emulator accessible via `CLI` button supporting commands (`help`, `skills`, `projects`, `certs`, `hire`, `clear`, `contact`).
+- **Command Palette (`Cmd+K` / `Ctrl+K`)**: Rapid global navigation and search shortcut system for instant access to any page or tool.
+- **Interactive Portfolio FAQ**: Local search assistant answering queries about experience, tech stack, and background without external API calls or latency.
+- **Verified Credentials Vault**: Categorized document viewer for industry certifications from Stanford Online, AWS, Google Cloud, and Deloitte with in-browser previews and verification links.
+- **Project Case Studies**: Comprehensive deep-dive breakdowns covering architectural diagrams, challenges, implementation, trade-offs, and verified screenshot workflows.
+- **3D WebGL Visualization**: Three.js scene optimized with WebGL fallbacks to never block or impede readability on smaller screens.
+- **Mobile First & Responsive Layout**: 2x2 metric dashboards, collapsible mobile navigation drawer with quick action docks, touch-optimized button targets, and responsive cyber node timelines.
+- **Security Hardening**: Enforced HSTS (`max-age=31536000; includeSubDomains; preload`), `X-Frame-Options: SAMEORIGIN`, `X-Content-Type-Options: nosniff`, and RFC 9116 standard `/.well-known/security.txt`.
+
+---
+
+## Pages & Routing Architecture
+
+```text
 /
-├── /              Home overview (hero, highlights, top projects and credentials)
-├── /projects      Production builds, case studies, and architecture diagrams
-├── /certifications Credential document library with keyword search and document viewer
-├── /experience    Career and internship timeline
-├── /about         Systems philosophy and interactive AI pipeline simulator
-├── /contact       Direct contact channels and enquiry form
-├── /privacy       Privacy policy
-└── /terms         Terms and conditions
+├── /                     Home page (hero with status beacon, telemetry, top projects, credentials, and timeline)
+├── /projects/            Complete project vault with category filters, modal inspect, and live/source action links
+├── /projects/[slug]/     Individual static deep-dive case studies with architectural problem-solution breakdowns
+├── /certifications/      Verified credentials vault with live keyword search and in-browser modal document viewer
+├── /experience/          Chronological engineering trajectory and internship milestone timeline
+├── /about/               Engineering philosophy, core production tenets, and interactive AI pipeline simulator
+├── /contact/             Direct communication channels, verified social profiles, and client-side contact form
+├── /privacy/             Transparent privacy disclosures regarding Cloudflare web analytics and contact telemetry
+└── /terms/               Terms and conditions of website use
 ```
 
 ---
 
-## Features
+## Tech Stack & Architecture
 
-- **Portfolio FAQ**: transparent local question search, without an AI model or RAG backend.
-- **AI Pipeline Simulator**: an interactive multi-agent reasoning playground with execution steps and latency readouts.
-- **Credential document library**: searchable catalog of credentials with an in-browser PDF and image viewer.
-- **Production Case Studies**: problem, solution, outcome, and system architecture for each project.
-- **3D WebGL scene**: a Three.js scene positioned so it never overlaps the primary content.
-- **Command palette**: keyboard-driven navigation via `Cmd+K` / `Ctrl+K`.
-- **Developer CLI**: an in-browser terminal emulator supporting `help`, `skills`, `projects`, `certs`, `hire`, and `clear`.
-- **Grok Bot demo**: an interactive, dependency-free procedural SVG avatar engine driven by a compact JSON export.
-- **Legal pages and favicon**: privacy policy, terms and conditions, and a generated SVG favicon.
-- **Responsive layout**: tested from small mobile widths through to large desktop displays.
-- **Reduced motion support**: scroll and animation behaviors respect the user's operating system preference.
-
----
-
-## Tech stack
-
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, static export `output: "export"`)
-- **Core library**: [React 19](https://react.dev/)
-- **Language**: [TypeScript 5](https://www.typescriptlang.org/)
-- **3D and WebGL**: [Three.js](https://threejs.org/), [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber), [@react-three/drei](https://github.com/pmndrs/drei)
-- **Styling**: [Tailwind CSS v3](https://tailwindcss.com/), `tailwind-merge`, `clsx`
-- **Animation**: [Framer Motion](https://www.framer.com/motion/), [GSAP](https://greensock.com/gsap/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Forms**: [EmailJS](https://www.emailjs.com/) (client-side dispatch)
+| Layer | Technologies |
+|---|---|
+| **Framework** | [Next.js 15](https://nextjs.org/) (App Router, Static Export `output: "export"`) |
+| **Core UI** | [React 19](https://react.dev/), [TypeScript 5](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS v3](https://tailwindcss.com/), `tailwind-merge`, `clsx` |
+| **Motion & Graphics** | [Framer Motion](https://www.framer.com/motion/), [Three.js](https://threejs.org/), [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber), [GSAP](https://greensock.com/gsap/) |
+| **Icons & Media** | [Lucide React](https://lucide.dev/), Next.js Image Optimization |
+| **Forms** | [EmailJS](https://www.emailjs.com/) (Direct secure browser dispatch) |
+| **Deployment** | [Cloudflare Pages](https://pages.cloudflare.com/) with custom headers and route rules |
+| **Compliance** | RFC 9116 `security.txt`, Schema.org JSON-LD Person & WebSite entities |
 
 ---
 
-## Deployment (Cloudflare Pages)
+## Security & Cloudflare Hardening
 
-This project uses static export (`output: "export"` with `trailingSlash: true`). In the Cloudflare Pages dashboard:
+The repository enforces production web security best practices:
 
-1. Go to **Workers & Pages → Create application → Pages → Connect to Git**.
-2. Select the repository.
-3. Configure the build:
-   - **Framework preset**: `None` (or `Next.js (Static HTML Export)`)
-   - **Build command**: `npm run build`
-   - **Build output directory**: `out`
-   - **Root directory**: `/`
-4. Add an environment variable `NODE_VERSION` set to `20`.
-5. Save and deploy.
-
-The repository includes `.node-version`, `.nvmrc`, `public/_headers`, and `public/_routes.json` for Cloudflare Pages compatibility.
+- **HSTS (HTTP Strict Transport Security)**: `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload` configured via `public/_headers`.
+- **Content Protection**: `X-Frame-Options: SAMEORIGIN` and `X-Content-Type-Options: nosniff`.
+- **Vulnerability Disclosure Policy**: Located at `/.well-known/security.txt` and `/security.txt` conforming to RFC 9116.
+- **Route Isolation**: `public/_routes.json` bypasses worker execution for static assets, sitemaps, web manifests, and security metadata.
 
 ---
 
-## Local development
+## Local Development
 
 ### Prerequisites
 
 - **Node.js**: v18.18+ or v20+
-- **npm**
+- **npm**: v9+
 
 ### Setup
 
 ```bash
+# Clone the repository
 git clone https://github.com/hammad986/Hammad-Portfolio.git
 cd Hammad-Portfolio
+
+# Install dependencies
 npm install
+
+# Start local development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-### Contact form environment variables (optional)
+### Optional: Contact Form Environment Variables
 
-Create a `.env.local` file:
+Create a `.env.local` file in the root directory:
 
 ```env
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
@@ -111,77 +112,47 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-### Production build
+### Static Production Build
 
 ```bash
 npm run build
 ```
 
-The static build is written to `out/`.
+The fully static site is compiled to the `out/` directory ready for deployment on Cloudflare Pages, GitHub Pages, Vercel, or any CDN.
 
 ---
 
-## Repository structure
+## Deployment to Cloudflare Pages
 
-```text
-├── app/
-│   ├── layout.tsx              Root layout, metadata, and structured data
-│   ├── page.tsx                Home overview page
-│   ├── icon.svg                Site favicon
-│   ├── globals.css             Global styles and theme variables
-│   ├── projects/page.tsx       Projects and case studies
-│   ├── certifications/page.tsx Credentials vault
-│   ├── experience/page.tsx     Career timeline
-│   ├── about/page.tsx          Systems architecture and AI simulator
-│   ├── contact/page.tsx        Contact channels
-│   ├── privacy/page.tsx        Privacy policy
-│   ├── terms/page.tsx          Terms and conditions
-│   ├── sitemap.ts              Generated sitemap
-│   └── robots.ts               Generated robots rules
-├── components/
-│   ├── grok-bot/               Grok Bot procedural avatar engine and React wrapper
-│   ├── sections/               Modular page sections
-│   └── ...                      Modals, header, and interactive widgets
-├── lib/
-│   └── data.ts                 Single source of truth for projects, credentials, and experience
-├── public/
-│   ├── assets/                 Images, screenshots, and certificate documents
-│   ├── _headers                Cloudflare Pages security and caching headers
-│   └── _routes.json            Cloudflare Pages route rules
-├── next.config.ts              Static export configuration
-└── README.md
-```
+This site is pre-configured for continuous deployment with Cloudflare Pages:
+
+1. In the Cloudflare Dashboard, navigate to **Workers & Pages → Create Application → Pages → Connect to Git**.
+2. Select `hammad986/Hammad-Portfolio`.
+3. Configure the build parameters:
+   - **Framework preset**: `Next.js (Static HTML Export)` or `None`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `out`
+   - **Root directory**: `/`
+4. In Environment variables, set `NODE_VERSION` to `20`.
+5. Deploy.
+
+The repository includes `.node-version`, `.nvmrc`, `public/_headers`, and `public/_routes.json` for seamless zero-configuration Cloudflare Pages deployments.
 
 ---
 
-## Contact
+## Contact & Profiles
 
 - **Website**: [hammad986.me](https://hammad986.me)
 - **Email**: [mdhammad2906@gmail.com](mailto:mdhammad2906@gmail.com)
-- **LinkedIn**: [linkedin.com/in/muhammed-hammad-42659726a](https://www.linkedin.com/in/muhammed-hammad-42659726a)
+- **LinkedIn**: [linkedin.com/in/hammad986](https://www.linkedin.com/in/hammad986/)
 - **GitHub**: [@hammad986](https://github.com/hammad986)
+- **Hugging Face**: [huggingface.co/hammad986](https://huggingface.co/hammad986)
+- **LeetCode**: [leetcode.com/u/hammad986](https://leetcode.com/u/hammad986/)
+- **Kaggle**: [kaggle.com/mdhamd](https://www.kaggle.com/mdhamd)
 - **Instagram**: [@mud_.hammad](https://www.instagram.com/mud_.hammad)
-- **Phone**: `+91 6369740522`
 
 ---
 
 ## License
 
 MIT License © 2026 Muhammed Hammad.
-
-## Audit improvements and validation
-
-See `docs/CONFIRMATIONS.md` for unresolved personal details and `docs/DEPENDENCY-REVIEW.md` for dependency decisions. Individual project pages use static `generateStaticParams`, so the existing Cloudflare static-export deployment remains supported.
-
-```bash
-npm ci
-npm run lint
-npx tsc --noEmit
-npm run build
-npm test
-npm audit
-```
-
-The Portfolio FAQ is local search, not a model or RAG service. The architecture walkthrough is illustrative. Credential PDF previews show only the first page; original documents remain downloadable. Optional animated skills are loaded on demand. Sound is off until enabled, with a local saved preference.
-
-Do not assume `npm run start` serves the exported production site. For local production inspection, serve `out/` with a static HTTP server. No deployment occurs during the validation commands above. Git-connected production and preview rules must be reviewed before pushing changes.

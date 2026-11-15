@@ -30,8 +30,11 @@ export function Hero() {
         <div className="relative order-2 lg:order-1 mx-auto w-full max-w-[240px] sm:max-w-sm">
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#080E21] p-3.5 shadow-[0_20px_60px_rgba(5,8,20,0.8)]">
             {/* Availability Beacon */}
-            <div className="absolute left-6 top-6 z-20 flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-[#050814]/90 px-3 py-1 text-xs font-medium text-emerald-400 backdrop-blur-md">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            <div className="absolute left-4 top-4 z-20 flex items-center gap-2 rounded-full border border-emerald-500/30 bg-[#050814]/90 px-3 py-1 text-xs font-medium text-emerald-400 backdrop-blur-md shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
               <span className="font-mono text-[11px]">Open to work</span>
             </div>
 
@@ -65,37 +68,43 @@ export function Hero() {
         {/* Right Column */}
         <div className="order-1 lg:order-2 min-w-0 space-y-5">
           {/* Eyebrow Label */}
-          <div className="inline-flex max-w-full items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-slate-300">
-            <span className="break-words">AI Engineering and Full-Stack Development</span>
+          <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-500/25 bg-cyan-500/10 px-3.5 py-1.5 text-xs font-medium text-cyan-200">
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+            <span className="break-words font-mono text-[11px] sm:text-xs tracking-wide">AI Engineering & Full-Stack Systems</span>
           </div>
 
           {/* Name and Role */}
           <div>
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Muhammed Hammad
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+              Muhammed <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyanCore bg-clip-text text-transparent">Hammad</span>
             </h1>
-            <p className="mt-3 text-xl font-semibold text-slate-200 sm:text-2xl lg:text-3xl">
-              AI/ML Engineer and Full-Stack Developer
+            <p className="mt-2.5 text-lg font-semibold text-slate-200 sm:text-2xl lg:text-3xl">
+              AI/ML Engineer & Full-Stack Developer
             </p>
-            <p className="mt-2 font-mono text-sm text-slate-500">
-              hammad986
-            </p>
+            <div className="mt-3 flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-0.5 font-mono text-xs text-slate-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-cyanCore"></span>
+                @hammad986
+              </span>
+              <span className="text-xs text-slate-500 font-mono hidden sm:inline">•</span>
+              <span className="text-xs text-slate-400 font-mono hidden sm:inline">B.Tech CSBS (2027)</span>
+            </div>
           </div>
 
           {/* Value Proposition */}
-          <p className="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            B.Tech CSBS student, graduating in 2027. I build Python, generative AI and full-stack applications, from video question answering to document extraction.
+          <p className="max-w-2xl text-sm sm:text-base leading-relaxed text-slate-300 font-normal">
+            B.Tech Computer Science & Business Systems student (graduating 2027). Building production-grade generative AI platforms, intelligent document extraction pipelines, video question answering models, and scalable full-stack web applications.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3 pt-2">
             <Link
               href="/projects"
               onClick={() => sounds.playClick()}
               className={buttonVariants({
                 variant: "primary",
                 size: "lg",
-                className: "rounded-lg"
+                className: "w-full sm:w-auto justify-center rounded-xl font-semibold shadow-[0_0_20px_rgba(0,242,254,0.2)]"
               })}
             >
               View projects
@@ -109,7 +118,7 @@ export function Hero() {
               className={buttonVariants({
                 variant: "secondary",
                 size: "lg",
-                className: "rounded-lg"
+                className: "w-full sm:w-auto justify-center rounded-xl font-semibold border-white/15 bg-white/[0.04] hover:border-cyan-500/40"
               })}
             >
               <Download className="mr-2 h-4 w-4 text-cyanCore" />
@@ -122,7 +131,7 @@ export function Hero() {
               className={buttonVariants({
                 variant: "secondary",
                 size: "lg",
-                className: "rounded-lg"
+                className: "w-full sm:w-auto justify-center rounded-xl font-semibold border-white/15 bg-white/[0.04] hover:border-emerald-500/40"
               })}
             >
               <Award className="mr-2 h-4 w-4 text-emeraldCore" />
@@ -130,7 +139,9 @@ export function Hero() {
             </Link>
           </div>
 
-          <p className="text-sm text-slate-300">Selected work: <Link className="text-cyanCore underline" href="/projects/advanced-video-qa/">Video QA</Link> · <Link className="text-cyanCore underline" href="/projects/smart-doc-ai/">Smart Doc AI</Link> · <Link className="text-cyanCore underline" href="/projects/dealflow-crm/">DealFlow CRM</Link></p>
+          <p className="text-xs sm:text-sm text-slate-400">
+            Selected work: <Link className="text-cyanCore underline hover:text-cyan-300 transition" href="/projects/advanced-video-qa/">Video QA</Link> · <Link className="text-cyanCore underline hover:text-cyan-300 transition" href="/projects/smart-doc-ai/">Smart Doc AI</Link> · <Link className="text-cyanCore underline hover:text-cyan-300 transition" href="/projects/dealflow-crm/">DealFlow CRM</Link>
+          </p>
 
           {/* Social Handles */}
           <div className="flex items-center gap-3 pt-2">

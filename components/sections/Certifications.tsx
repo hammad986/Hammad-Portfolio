@@ -144,7 +144,11 @@ export function CertificationsAndStack({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.25 }}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-cyan-500/20 bg-[#080E21] p-4 sm:p-5 shadow-[0_20px_60px_rgba(5,8,20,0.8)] transition-all duration-300 hover:border-cyan-500/50 hover:bg-[#0C132C] hover:shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_30px_rgba(0,242,254,0.15)] hover:-translate-y-1 cursor-pointer"
+                onClick={() => {
+                  sounds.playClick();
+                  setActiveCert(cert);
+                }}
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-cyan-500/20 bg-[#080E21] p-4 sm:p-5 shadow-[0_20px_60px_rgba(5,8,20,0.8)] transition-all duration-300 hover:border-cyan-500/50 hover:bg-[#0C132C] hover:shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_30px_rgba(0,242,254,0.15)] hover:-translate-y-1 active:scale-[0.99] cursor-pointer"
               >
                 <div>
                   {/* Top Bar: Issuer & File Type Badge */}

@@ -256,7 +256,18 @@ export function Projects({
                       ))}
                     </div>
                   </div>
-                  <div className="px-5 pb-5"><Link className="text-cyanCore underline text-sm" href={`/projects/${project.id}/`}>Read full case study</Link>{project.demoStatus && <p className="mt-2 text-xs text-amber-200">{project.demoStatus}</p>}</div>
+                  <div className="px-4 sm:px-6 pb-5">
+                    <Link
+                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-cyanCore hover:text-cyan-300 transition group/link"
+                      href={`/projects/${project.id}/`}
+                    >
+                      <span>Read full case study</span>
+                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+                    </Link>
+                    {project.demoStatus && (
+                      <p className="mt-2 text-[11px] sm:text-xs text-amber-200/90 font-medium">{project.demoStatus}</p>
+                    )}
+                  </div>
                 </motion.article>
               );
             })}
