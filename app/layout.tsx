@@ -100,9 +100,6 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   alternates: {
     canonical: siteUrl
-  },
-  other: {
-    "google-adsense-account": "ca-pub-8192587559412892"
   }
 };
 
