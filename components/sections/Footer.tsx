@@ -18,10 +18,10 @@ export function Footer() {
         <div className="flex items-center gap-3">
           <div className="relative h-8 w-8 overflow-hidden rounded-xl border border-cyan-500/40 bg-cyan-500/10 p-1">
             <Image
-              src="/assets/aetherion_logo.webp"
-              alt="Aetherion Logo"
+              src="/icon.svg"
+              alt="Muhammed Hammad"
               fill
-              className="object-cover"
+              className="object-contain p-0.5"
               sizes="32px"
             />
           </div>

@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     shortcut: "/icon.svg",
-    apple: "/assets/aetherion_logo.webp"
+    apple: "/icon.svg"
   },
   manifest: "/manifest.webmanifest",
   alternates: {

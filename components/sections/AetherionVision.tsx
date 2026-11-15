@@ -59,10 +59,10 @@ export function AetherionVision() {
               <div className="relative flex h-full items-center gap-5">
                 <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-2 sm:h-24 sm:w-24">
                   <Image
-                    src="/assets/aetherion_logo.webp"
-                    alt="Aetherion Visual"
+                    src="/icon.svg"
+                    alt="MH Visual"
                     fill
-                    className="object-cover"
+                    className="object-contain p-2"
                     sizes="96px"
                   />
                 </div>

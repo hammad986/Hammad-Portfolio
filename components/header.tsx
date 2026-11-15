@@ -64,10 +64,10 @@ export function Header() {
           >
             <div className="relative h-8 w-8 overflow-hidden rounded-xl border border-cyan-500/40 bg-cyan-500/10 p-1 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_15px_rgba(0,242,254,0.3)]">
               <Image
-                src="/assets/aetherion_logo.webp"
+                src="/icon.svg"
                 alt="Muhammed Hammad"
                 fill
-                className="object-cover"
+                className="object-contain p-0.5"
                 sizes="32px"
               />
             </div>
